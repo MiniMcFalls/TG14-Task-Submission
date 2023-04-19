@@ -1,0 +1,107 @@
+Maintenence As screen:
+
+    Label12_2 As label:
+        BorderColor: =RGBA(255, 191, 0, 1)
+        BorderThickness: =10
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =768
+        Text: =""
+        Width: =1366
+        ZIndex: =1
+
+    LblSuccessMsg3_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =183
+        Size: =20
+        Text: |-
+            ="This application is currently under essential maintenence.
+            
+            Please try again later"
+        Width: =Parent.Width * 0.75
+        X: =170
+        Y: =339
+        ZIndex: =7
+
+    Lock_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        iconCircle3_16 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(255, 191, 0, 0.25)
+            Height: =157
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =157
+            X: =604
+            Y: =160
+            ZIndex: =2
+
+        iconCircle3_17 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(255, 191, 0, 0.5)
+            Height: =143
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =143
+            X: =611
+            Y: =167
+            ZIndex: =3
+
+        iconCircle3_18 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(255, 191, 0, 0.75)
+            Height: =119
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =119
+            X: =623
+            Y: =179
+            ZIndex: =4
+
+        iconCircle3_19 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(255, 191, 0, 1)
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            X: =632
+            Y: =188
+            ZIndex: =5
+
+        iconCheck3_4 As icon.Check:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            Height: =iconCircle3_19.Height
+            Icon: =Icon.Lock
+            PaddingBottom: =Self.PaddingTop
+            PaddingLeft: =Self.PaddingTop
+            PaddingRight: =Self.PaddingTop
+            PaddingTop: =24
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =iconCircle3_19.Width
+            X: =632
+            Y: =188
+            ZIndex: =6
+

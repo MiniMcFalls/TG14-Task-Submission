@@ -1,0 +1,4208 @@
+"'Form Page 9 - Confirmation' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =varBackgroundFill
+    OnHidden: =
+    OnVisible: |-
+        =Set(
+            varConfirmationIcon,
+            Icon.Information
+        );
+
+    "'Sub Heading_9' As button":
+        Align: =Align.Left
+        BorderThickness: =0
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(254, 203, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        PaddingBottom: =0
+        PaddingLeft: =50
+        PaddingRight: =0
+        PaddingTop: =0
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =16
+        Text: ="Confirmation"
+        Width: =1301
+        X: =65
+        Y: =52
+        ZIndex: =1
+
+    "'Justification Text_9' As htmlViewer":
+        AutoHeight: =true
+        Height: =96106
+        HtmlText: |-
+            ="<div style='text-align:center'>
+            	<p>
+            		<b>
+            			<u>
+            				 Confirm Your Responses
+            			</u>
+            		</b>
+            	</p>
+            	<p>
+            		<b>Please review your responses below and ensure the information is correct before submitting.<b>
+            	</p>
+            </div>
+            "
+        Width: =1054
+        X: =266
+        Y: =110
+        ZIndex: =4
+
+    "'Proceed button_9' As button":
+        DisplayMode: =
+        Fill: =RGBA(54, 176, 75, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =34
+        HoverColor: =Color.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |
+            =//------------------------------------------------------------------------------Switch Location Based Job Number Set
+            Switch(
+                gblSubmitLocation,
+            //------------------------------------------------------------------------------RAF Lossiemouth
+                "RAF Lossiemouth",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Lossiemouth"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Lossiemouth"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Lossiemouth"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                ),
+            //------------------------------------------------------------------------------RAF Waddington
+                "RAF Waddington",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Waddington"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Waddington"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Waddington"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                ),
+            //------------------------------------------------------------------------------RAF Coningsby
+                "RAF Coningsby",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Coningsby"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Coningsby"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Coningsby"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                ),
+            //------------------------------------------------------------------------------RAF Leeming
+                "RAF Leeming",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Leeming"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Leeming"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Leeming"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                ),
+            //------------------------------------------------------------------------------RAF Brize Norton
+                "RAF Brize Norton",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Brize Photo"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Brize Photo"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Brize Photo"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                ),
+            //------------------------------------------------------------------------------RAF Benson
+                "RAF Benson",
+                Set(
+                    varJobNumber,
+                    If(
+                        "2022" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        First(
+                            SortByColumns(
+                                Filter(
+                                    '1177 Task Register 2022',
+                                    Unit.Value = "Benson"
+                                ),
+                                "Job_x0020_Number",
+                                SortOrder.Descending
+                            )
+                        ).Job + 1,
+                        If(
+                            "2023" in Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            First(
+                                SortByColumns(
+                                    Filter(
+                                        '1177 Task Register 2023',
+                                        Unit.Value = "Benson"
+                                    ),
+                                    "Job_x0020_Number",
+                                    SortOrder.Descending
+                                )
+                            ).Job + 1,
+                            If(
+                                "2024" in Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                First(
+                                    SortByColumns(
+                                        Filter(
+                                            '1177 Task Register 2024',
+                                            Unit.Value = "Benson"
+                                        ),
+                                        "Job_x0020_Number",
+                                        SortOrder.Descending
+                                    )
+                                ).Job + 1
+                            )
+                        )
+                    )
+                )
+            );
+            //------------------------------------------------------------------------------Switch for Patch of 1177 Doc
+            If(
+                "2022" in Concat(
+                    Filter(
+                        UserResponses,
+                        PAResponseID = varResponseID
+                    ),
+                    'Task Date'
+                ),
+                Patch(
+                    '1177 Task Register 2022',
+                    {
+                        Job: varJobNumber,
+                        'Month Task Generated': Text(
+                            DateValue(
+                                Today(),
+                                "en-GB"
+                            ),
+                            "mmmm"
+                        ),
+                        'Stills, Video or Both': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Service Required'
+                        ),
+                        Status: "PLANNED",
+                        'Task Date': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        'Task Time': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Start Time'
+                        ),
+                        'Task Type': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Project Category'
+                        ),
+                        'Task Location': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Location'
+                        ),
+                        'Aircraft Tail No. Course No. or Other local Reference': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'AC Tail Number'
+                        ),
+                        'Task Description': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task requirements'
+                        ),
+                        Rank: Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Cust Rank'
+                        ),
+                        Name: Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Cust Forename'
+                            ) & " " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Cust Surname'
+                            )
+                        ),
+                        'Place of Work': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Cust Location'
+                        ),
+                        Extension: Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Contact Number'
+                        ),
+                        'Response ID': Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            Text(PAResponseID)
+                        ),
+                        Unit: {
+                            Value: Switch(
+                                gblSubmitLocation,
+                                "RAF Lossiemouth",
+                                "Lossiemouth",
+                                "RAF Coningsby",
+                                "Coningsby",
+                                "RAF Waddington",
+                                "Waddington",
+                                "RAF Leeming",
+                                "Leeming",
+                                "RAF Brize Norton",
+                                "Brize Photo",
+                                "RAF Benson",
+                                "Benson"
+                            )
+                        }
+                    }
+                ),
+                If(
+                    "2023" in Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Task Date'
+                    ),
+                    Patch(
+                        '1177 Task Register 2023',
+                        {
+                            Job: varJobNumber,
+                            'Month Task Generated': Text(
+                                DateValue(
+                                    Today(),
+                                    "en-GB"
+                                ),
+                                "mmmm"
+                            ),
+                            'Stills, Video or Both': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Service Required'
+                            ),
+                            Status: "PLANNED",
+                            'Task Date': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Date'
+                            ),
+                            'Task Time': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Start Time'
+                            ),
+                            'Task Type': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Project Category'
+                            ),
+                            'Task Location': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task Location'
+                            ),
+                            'Aircraft Tail No. Course No. or Other local Reference': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'AC Tail Number'
+                            ),
+                            'Task Description': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Task requirements'
+                            ),
+                            Rank: Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Cust Rank'
+                            ),
+                            Name: Concatenate(
+                                Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Cust Forename'
+                                ) & " " & Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Cust Surname'
+                                )
+                            ),
+                            'Place of Work': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Cust Location'
+                            ),
+                            Extension: Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Contact Number'
+                            ),
+                            'Response ID': Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                Text(PAResponseID)
+                            ),
+                            Unit: {
+                                Value: Switch(
+                                    gblSubmitLocation,
+                                    "RAF Lossiemouth",
+                                    "Lossiemouth",
+                                    "RAF Coningsby",
+                                    "Coningsby",
+                                    "RAF Waddington",
+                                    "Waddington",
+                                    "RAF Leeming",
+                                    "Leeming",
+                                    "RAF Brize Norton",
+                                    "Brize Photo",
+                                    "RAF Benson",
+                                    "Benson"
+                                )
+                            }
+                        }
+                    ),
+                    If(
+                        "2024" in Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        ),
+                        Patch(
+                            '1177 Task Register 2024',
+                            {
+                                Job: varJobNumber,
+                                'Month Task Generated': Text(
+                                    DateValue(
+                                        Today(),
+                                        "en-GB"
+                                    ),
+                                    "mmmm"
+                                ),
+                                'Stills, Video or Both': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Service Required'
+                                ),
+                                Status: "PLANNED",
+                                'Task Date': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Date'
+                                ),
+                                'Task Time': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Start Time'
+                                ),
+                                'Task Type': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Project Category'
+                                ),
+                                'Task Location': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task Location'
+                                ),
+                                'Aircraft Tail No. Course No. or Other local Reference': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'AC Tail Number'
+                                ),
+                                'Task Description': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Task requirements'
+                                ),
+                                Rank: Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Cust Rank'
+                                ),
+                                Name: Concatenate(
+                                    Concat(
+                                        Filter(
+                                            UserResponses,
+                                            PAResponseID = varResponseID
+                                        ),
+                                        'Cust Forename'
+                                    ) & " " & Concat(
+                                        Filter(
+                                            UserResponses,
+                                            PAResponseID = varResponseID
+                                        ),
+                                        'Cust Surname'
+                                    )
+                                ),
+                                'Place of Work': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Cust Location'
+                                ),
+                                Extension: Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    'Contact Number'
+                                ),
+                                'Response ID': Concat(
+                                    Filter(
+                                        UserResponses,
+                                        PAResponseID = varResponseID
+                                    ),
+                                    Text(PAResponseID)
+                                ),
+                                Unit: {
+                                    Value: Switch(
+                                        gblSubmitLocation,
+                                        "RAF Lossiemouth",
+                                        "Lossiemouth",
+                                        "RAF Coningsby",
+                                        "Coningsby",
+                                        "RAF Waddington",
+                                        "Waddington",
+                                        "RAF Leeming",
+                                        "Leeming",
+                                        "RAF Brize Norton",
+                                        "Brize Photo",
+                                        "RAF Benson",
+                                        "Benson"
+                                    )
+                                }
+                            }
+                        )
+                    )
+                )
+            );
+            //------------------------------------------------------------------------------Switch for Patch of Task Approvals Doc
+            Patch(
+                'TG14 Task Information',
+                First(
+                    Filter(
+                        'TG14 Task Information',
+                        ID = Value(varResponseID)
+                    )
+                ),
+                {
+                    Title: varJobNumber,
+                    'Customer Name': Concatenate(
+                        Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Cust Forename'
+                        ) & " " & Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Cust Surname'
+                        )
+                    ),
+                    Rank: Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Cust Rank'
+                    ),
+                    'Customer Email': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Cust Email'
+                    ),
+                    'Customer Section': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Cust Location'
+                    ),
+                    'Customer Contact Number': Concat(
+                        Office365Users.MyProfile().BusinessPhones,
+                        Value
+                    ),
+                    'POC if Different': If(
+                        'Alternate Contact Check_1'.Value = true,
+                        Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Alt Rank'
+                            ),
+                            " ",
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Alt Forename'
+                            ),
+                            " ",
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Alt Surname'
+                            ),
+                            " - ",
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Alt Contact'
+                            )
+                        ),
+                        Blank()
+                    ),
+                    'LM Rank Name': If(
+                        Or(
+                            CurrentUser.JobTitle = "AC",
+                            CurrentUser.JobTitle = "LAC",
+                            CurrentUser.JobTitle = "SAC",
+                            CurrentUser.JobTitle = "SAC(T)"
+                        ),
+                        Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'LM Rank'
+                            ),
+                            " ",
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'LM Forename'
+                            ),
+                            " ",
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'LM Surname'
+                            )
+                        ),
+                        Blank()
+                    ),
+                    'LM Section': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'LM Section'
+                    ),
+                    'LM O365 data': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'LM O365 Data'
+                    ),
+                    'LM Contact Number': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'LM Contact Number'
+                    ),
+                    'Task Date': DateValue(
+                        Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Task Date'
+                        )
+                    ),
+                    'Start Time': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Start Time'
+                    ),
+                    'Task Location': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Task Location'
+                    ),
+                    'Service they Require': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Service Required'
+                    ),
+                    'Task Requirements': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Task requirements'
+                    ),
+                    Deadline: DateValue(
+                        Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Product Deadline'
+                        )
+                    ),
+                    Hazards: Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'Working Hazards'
+                    ),
+                    TLB: Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        TLB
+                    ),
+                    'Date Submitted': DateTimeValue(
+                        Now(),
+                        "en-GB"
+                    ),
+                    'Project Category': {
+                        Value: Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            'Project Category'
+                        )
+                    },
+                    'Response ID': Value(
+                        Concat(
+                            Filter(
+                                UserResponses,
+                                PAResponseID = varResponseID
+                            ),
+                            Text(PAResponseID)
+                        )
+                    ),
+                    Unit: {
+                        Value: Switch(
+                            gblSubmitLocation,
+                            "RAF Lossiemouth",
+                            "Lossiemouth",
+                            "RAF Coningsby",
+                            "Coningsby",
+                            "RAF Waddington",
+                            "Waddington",
+                            "RAF Leeming",
+                            "Leeming",
+                            "RAF Brize Norton",
+                            "Brize Photo",
+                            "RAF Benson",
+                            "Benson"
+                        )
+                    },
+                    'Approval Status': {Value: "Awaiting Approval"}
+                }
+            );
+            Switch(
+                Concat(
+                    Filter(
+                        UserResponses,
+                        PAResponseID = varResponseID
+                    ),
+                    'Project Category'
+                ),
+                "Visit",
+                Patch(
+                    'TG14 Task Information',
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = varResponseID
+                        )
+                    ),
+                    {
+                        'Visit Details': Concatenate(
+                            "Serial 1: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 1 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 1 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 1 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 1 Description'
+                            ) & "
+                            " & "Serial 2: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 2 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 2 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 2 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 2 Description'
+                            ) & "
+                            " & "Serial 3: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 3 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 3 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 3 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 3 Description'
+                            ) & "
+                            " & "Serial 4: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 4 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 4 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 4 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 4 Description'
+                            ) & "
+                            " & "Serial 5: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 5 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 5 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 5 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 5 Description'
+                            ) & "
+                            " & "Serial 6: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 6 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 6 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 6 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 6 Description'
+                            ) & "
+                            " & "Serial 7: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 7 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 7 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 7 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 7 Description'
+                            ) & "
+                            " & "Serial 8: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 8 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 8 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 8 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 8 Description'
+                            ) & "
+                            " & "Serial 9: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 9 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 9 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 9 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 9 Description'
+                            ) & "
+                            " & "Serial 10: " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 10 Date'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 10 Time'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 10 Location'
+                            ) & "-" & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Serial 10 Description'
+                            )
+                        )
+                    }
+                ),
+                "PR/Media",
+                Patch(
+                    'TG14 Task Information',
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = varResponseID
+                        )
+                    ),
+                    {
+                        'Media/PR Request Cont.': Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Publishing Channels'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Basic Metadata'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Package Format'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Editing Requests'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Delivery Method'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Product Embargo'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Product Embargo Date'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'T&S UIN'
+                            ) & "
+                        " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Any Other Details'
+                            ) & "
+                        "
+                        )
+                    }
+                ),
+                "Official Group",
+                Patch(
+                    'TG14 Task Information',
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = varResponseID
+                        )
+                    ),
+                    {
+                        'Official Groups': Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Group Number'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Group Dress State'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Group Background'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Execs Front Row'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Benches&Chairs Organised'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Group Print Size'
+                            )
+                        )
+                    }
+                ),
+                "Portrait",
+                Patch(
+                    'TG14 Task Information',
+                    First(
+                        Filter(
+                            'TG14 Task Information',
+                            ID = varResponseID
+                        )
+                    ),
+                    {
+                        'Portrait Request': Concatenate(
+                            Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Portrait Required'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'No1 Post Nominals'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Photo Dist'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Tail Portrait Location'
+                            ) & "
+                            " & Concat(
+                                Filter(
+                                    UserResponses,
+                                    PAResponseID = varResponseID
+                                ),
+                                'Non-Standard ID Details'
+                            )
+                        )
+                    }
+                )
+            );
+            // If Successful Do //
+            Set(
+                varConfirmationIcon,
+                Icon.CheckBadge
+            );
+            Navigate(
+                'Form Page 10 - Confirmed',
+                ScreenTransition.Fade
+            );
+        Text: ="CONTINUE"
+        Width: =117
+        X: =1228
+        Y: =716
+        ZIndex: =5
+
+    Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =false
+        BorderThickness: =0
+        Height: =433
+        SnapToColumns: =false
+        Width: =994
+        X: =339
+        Y: =253
+        ZIndex: =6
+
+        "'Your Details Confirm' As dataCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =260
+            Width: =948
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            "'S1 title_1' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Your Details"
+                Underline: =true
+                Width: =262
+                X: =8
+                Y: =8
+                ZIndex: =1
+
+            Rectangle3_67 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =8
+                Y: =250
+                ZIndex: =3
+
+            Rectangle3_66 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =216
+                Width: =1
+                X: =406
+                Y: =19
+                ZIndex: =4
+
+            "'Rank:_2' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Rank:"
+                Width: =65
+                X: =21
+                Y: =39
+                ZIndex: =5
+
+            "'Name:_2' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Name:"
+                Width: =65
+                X: =21
+                Y: =64
+                ZIndex: =6
+
+            "'Email:_2' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Email:"
+                Width: =65
+                X: =21
+                Y: =89
+                ZIndex: =7
+
+            "'Rank O365_2' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(Office365Users.MyProfile().JobTitle = "LAC", "AS2", Office365Users.MyProfile().JobTitle = "SAC", "AS1", Office365Users.MyProfile().JobTitle = "SAC(T)", "A1(T)", Office365Users.MyProfile().JobTitle)
+                Width: =328
+                X: =77
+                Y: =39
+                ZIndex: =8
+
+            "'Name O365_2' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =Office365Users.MyProfile().GivenName & " " &Office365Users.MyProfile().Surname
+                Width: =328
+                X: =77
+                Y: =64
+                ZIndex: =9
+
+            "'User Email O365_2' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =Office365Users.MyProfileV2().mail
+                Width: =328
+                X: =77
+                Y: =89
+                ZIndex: =10
+
+            "'Location:_2' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =88
+                X: =21
+                Y: =114
+                ZIndex: =11
+
+            "'User Location O365_2' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =Office365Users.MyProfileV2().officeLocation
+                Width: =328
+                X: =77
+                Y: =114
+                ZIndex: =12
+
+            "'Rank:_3' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Rank:"
+                Width: =65
+                X: =422
+                Y: =39
+                ZIndex: =13
+
+            "'Name:_3' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Name:"
+                Width: =65
+                X: =422
+                Y: =64
+                ZIndex: =14
+
+            "'Email:_3' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Email:"
+                Width: =65
+                X: =422
+                Y: =89
+                ZIndex: =15
+
+            "'Rank O365_3' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'LM Rank'))
+                Width: =328
+                X: =478
+                Y: =39
+                ZIndex: =16
+
+            "'Name O365_3' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'LM Forename' & " " & 'LM Surname'))
+                Width: =328
+                X: =478
+                Y: =64
+                ZIndex: =17
+
+            "'User Email O365_3' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'LM Email'))
+                Width: =328
+                X: =478
+                Y: =89
+                ZIndex: =18
+
+            "'S1 title_2' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Line Managers Details"
+                Underline: =true
+                Width: =262
+                X: =422
+                Y: =8
+                ZIndex: =19
+
+            "'Location:_6' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Contact:"
+                Width: =88
+                X: =21
+                Y: =139
+                ZIndex: =20
+
+            "'User Location O365_21' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =Concat(Office365Users.MyProfile().BusinessPhones, Value)
+                Width: =328
+                X: =77
+                Y: =139
+                ZIndex: =21
+
+            "'Rank:_12' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Rank:"
+                Width: =65
+                X: =422
+                Y: =147
+                ZIndex: =22
+
+            "'Name:_6' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Name:"
+                Width: =65
+                X: =422
+                Y: =172
+                ZIndex: =23
+
+            "'Email:_55' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Email:"
+                Width: =65
+                X: =422
+                Y: =197
+                ZIndex: =24
+
+            "'Rank O365_11' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsBlank(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Alt Rank'))
+                Width: =328
+                X: =478
+                Y: =147
+                ZIndex: =25
+
+            "'Name O365_5' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Alt Forename' & " " & 'Alt Surname'))
+                Width: =328
+                X: =478
+                Y: =172
+                ZIndex: =26
+
+            "'User Email O365_5' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Alt Email'))
+                Width: =328
+                X: =478
+                Y: =197
+                ZIndex: =27
+
+            "'S1 title_16' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Alternate Contact Details"
+                Underline: =true
+                Width: =262
+                X: =422
+                Y: =116
+                ZIndex: =28
+
+            "'Location:_7' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Contact:"
+                Width: =88
+                X: =422
+                Y: =222
+                ZIndex: =29
+
+            "'User Location O365_22' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Alt Contact'))
+                Width: =328
+                X: =478
+                Y: =222
+                ZIndex: =30
+
+        "'Task Details Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =323
+            Visible: =true
+            Width: =948
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            "'S2 Title_1' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Task Details"
+                Underline: =true
+                Width: =262
+                X: =8
+                Y: =14
+                ZIndex: =1
+
+            Rectangle3_69 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =7
+                Y: =315
+                ZIndex: =3
+
+            Rectangle3_68 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =269
+                Width: =1
+                X: =406
+                Y: =25
+                ZIndex: =4
+
+            "'Rank:_4' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Task Date:"
+                Width: =88
+                X: =8
+                Y: =42
+                ZIndex: =5
+
+            "'Name:_4' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Task Time:"
+                Width: =82
+                X: =151
+                Y: =42
+                ZIndex: =6
+
+            "'Email:_4' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Task Location:"
+                Width: =100
+                X: =8
+                Y: =67
+                ZIndex: =7
+
+            "'Location:_3' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Service Required:"
+                Width: =112
+                X: =8
+                Y: =92
+                ZIndex: =8
+
+            "'Rank O365_4' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID)),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Task Date'))
+                Width: =78
+                X: =73
+                Y: =42
+                ZIndex: =9
+
+            "'Name O365_4' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Start Time'))
+                Width: =47
+                X: =213
+                Y: =42
+                ZIndex: =10
+
+            "'User Email O365_4' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Task Location'))
+                Width: =20*Len(Self.Text)
+                X: =92
+                Y: =67
+                ZIndex: =11
+
+            "'User Location O365_3' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Service Required'))
+                Width: =75
+                X: =112
+                Y: =92
+                ZIndex: =12
+
+            "'Location:_4' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Project Category:"
+                Width: =112
+                X: =8
+                Y: =117
+                ZIndex: =13
+
+            "'User Location O365_4' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category'))
+                Width: =158
+                X: =112
+                Y: =117
+                ZIndex: =14
+
+            "'Location:_5' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Task Deadline:"
+                Width: =112
+                X: =8
+                Y: =142
+                ZIndex: =15
+
+            "'User Location O365_5' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Product Deadline'))
+                Width: =158
+                X: =102
+                Y: =142
+                ZIndex: =16
+
+            "'Rank:_5' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="TLB:"
+                Width: =41
+                X: =8
+                Y: =167
+                ZIndex: =18
+
+            "'Email:_5' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Aircraft Tail Number:"
+                Width: =138
+                X: =8
+                Y: =192
+                ZIndex: =19
+
+            "'Rank O365_5' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), TLB))
+                Width: =127
+                X: =49
+                Y: =167
+                ZIndex: =20
+
+            "'Email:_6' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Working Hazards:"
+                Width: =138
+                X: =8
+                Y: =217
+                ZIndex: =22
+
+            "'User Location O365_7' As label":
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Working Hazards'))
+                Width: =379
+                X: =8
+                Y: =242
+                ZIndex: =23
+
+            "'Name:_5' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: |-
+                    ="Task Details:"
+                Underline: =true
+                Width: =95
+                X: =423
+                Y: =25
+                ZIndex: =24
+
+            "'User Location O365_8' As label":
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Height: =244
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Task requirements'))
+                Width: =498
+                X: =423
+                Y: =50
+                ZIndex: =25
+
+            "'Name O365_6' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'AC Tail Number'))
+                Width: =47
+                X: =131
+                Y: =192
+                ZIndex: =26
+
+        "'Media/PR Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =481
+            Visible: =If(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "PR/Media", true,false)
+            Width: =948
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            Rectangle3_71 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =7
+                Y: =465
+                ZIndex: =3
+
+            Rectangle3_70 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =412
+                Width: =1
+                X: =407
+                Y: =25
+                ZIndex: =4
+
+            "'S1 title_3' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Media/PR Request"
+                Underline: =true
+                Width: =262
+                X: =8
+                Y: =10
+                ZIndex: =5
+
+            "'Email:_7' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Publishing Channels:"
+                Width: =138
+                X: =8
+                Y: =38
+                ZIndex: =6
+
+            "'User Location O365_9' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Publishing Channels'))
+                Width: =379
+                X: =8
+                Y: =63
+                ZIndex: =7
+
+            "'Email:_8' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: ="Editing Requests"
+                Width: =138
+                X: =8
+                Y: =128
+                ZIndex: =8
+
+            "'User Location O365_10' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Editing Requests'))
+                Width: =379
+                X: =8
+                Y: =153
+                ZIndex: =9
+
+            "'Email:_9' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Basic Metadata & Keywords:"
+                Width: =216
+                X: =8
+                Y: =205
+                ZIndex: =10
+
+            "'User Location O365_11' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =55
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Basic Metadata'))
+                Width: =379
+                X: =8
+                Y: =230
+                ZIndex: =11
+
+            "'Email:_10' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Delivery Method:"
+                Width: =138
+                X: =7
+                Y: =285
+                ZIndex: =12
+
+            "'User Location O365_12' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Delivery Method'))
+                Width: =379
+                X: =7
+                Y: =310
+                ZIndex: =13
+
+            "'Email:_11' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Travel & Subsistence UIN:"
+                Width: =171
+                X: =7
+                Y: =362
+                ZIndex: =14
+
+            "'User Location O365_13' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'T&S UIN'))
+                Width: =112
+                X: =158
+                Y: =362
+                ZIndex: =15
+
+            "'Email:_12' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Product Embargo:"
+                Width: =171
+                X: =8
+                Y: =387
+                ZIndex: =16
+
+            "'User Location O365_14' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"No","Yes - " & Concat(Filter(UserResponses, PAResponseID = varResponseID ), 'Product Embargo'))
+                Width: =197
+                X: =124
+                Y: =387
+                ZIndex: =17
+
+            "'Email:_13' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: |-
+                    ="Any Other Details:"
+                Underline: =true
+                Width: =138
+                X: =426
+                Y: =38
+                ZIndex: =18
+
+            "'User Location O365_15' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =374
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Any Other Details'))
+                Width: =494
+                X: =426
+                Y: =63
+                ZIndex: =19
+
+            "'Email:_14' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Product Format:"
+                Width: =116
+                X: =8
+                Y: =412
+                ZIndex: =20
+
+            "'User Location O365_16' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A",Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Package Format'))
+                Width: =262
+                X: =124
+                Y: =412
+                ZIndex: =21
+
+        "'Visit Details' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =211
+            Visible: =If(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", true,false)
+            Width: =948
+            X: =0
+            Y: =3
+            ZIndex: =4
+
+            Rectangle3_72 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =7
+                Y: =188
+                ZIndex: =1
+
+            Rectangle3_73 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =137
+                Width: =1
+                X: =406
+                Y: =25
+                ZIndex: =2
+
+            "'S1 title_4' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Visit Details"
+                Underline: =true
+                Width: =262
+                X: =11
+                Y: =25
+                ZIndex: =3
+
+            "'Email:_15' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: ="Visitors"
+                Width: =138
+                X: =11
+                Y: =53
+                ZIndex: =4
+
+            "'User Location O365_17' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =33
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), Visitor))
+                Width: =379
+                X: =11
+                Y: =78
+                ZIndex: =5
+
+            "'Email:_16' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: ="VI Link"
+                Width: =138
+                X: =11
+                Y: =111
+                ZIndex: =6
+
+            "'User Location O365_18' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'VI Link'))
+                Width: =379
+                X: =11
+                Y: =136
+                ZIndex: =7
+
+            "'Email:_17' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: ="OOO Serials"
+                Width: =216
+                X: =426
+                Y: =111
+                ZIndex: =8
+
+            "'User Location O365_19' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =52
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'OOO Serials'))
+                Width: =379
+                X: =426
+                Y: =136
+                ZIndex: =9
+
+            "'Email:_18' As label":
+                Height: =26
+                Size: =9
+                Text: ="Dress State"
+                Width: =138
+                X: =426
+                Y: =53
+                ZIndex: =10
+
+            "'User Location O365_20' As label":
+                Color: =Color.DarkOrange
+                FontWeight: =FontWeight.Semibold
+                Height: =33
+                Overflow: =Overflow.Scroll
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Visit Dress State'))
+                Width: =379
+                X: =426
+                Y: =78
+                ZIndex: =11
+
+        "'S1 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 1 Description'))), true,false)
+            Width: =959
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            "'S1 title_5' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Serial 1"
+                Underline: =true
+                Width: =262
+                X: =9
+                Y: =6
+                ZIndex: =1
+
+            "'S1 Sub_1' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =9
+                Y: =21
+                ZIndex: =2
+
+            Rectangle3_74 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =9
+                Y: =167
+                ZIndex: =3
+
+            Rectangle3_75 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =9
+                ZIndex: =4
+
+            "'S1 Location_1' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 1 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: ="Location"
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =97
+                Y: =85
+                ZIndex: =8
+
+            "'S1 Description_1' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 1 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: ="Description"
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =430
+                Y: =34
+                ZIndex: =9
+
+            Label2 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 1 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 1 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =97
+                Y: =61
+                ZIndex: =10
+
+            "'Email:_19' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =9
+                Y: =60
+                ZIndex: =11
+
+            "'Email:_20' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =9
+                Y: =85
+                ZIndex: =12
+
+            "'Email:_21' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =430
+                Y: =9
+                ZIndex: =13
+
+        "'S2 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =233
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 2 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            "'S1 title_6' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Serial 2"
+                Underline: =true
+                Width: =262
+                X: =8
+                Y: =6
+                ZIndex: =1
+
+            "'S1 Sub_2' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =8
+                Y: =21
+                ZIndex: =2
+
+            Rectangle3_76 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =8
+                Y: =167
+                ZIndex: =3
+
+            Rectangle3_77 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =9
+                ZIndex: =4
+
+            "'S1 Location_2' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 2 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =96
+                Y: =85
+                ZIndex: =5
+
+            "'S1 Description_2' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 2 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =429
+                Y: =34
+                ZIndex: =6
+
+            Label2_1 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 2 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 2 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =96
+                Y: =61
+                ZIndex: =7
+
+            "'Email:_22' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =8
+                Y: =60
+                ZIndex: =8
+
+            "'Email:_23' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =8
+                Y: =85
+                ZIndex: =9
+
+            "'Email:_24' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =429
+                Y: =9
+                ZIndex: =10
+
+        "'S3 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =189
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 3 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =6
+            ZIndex: =7
+
+            "'S1 title_7' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 3"
+                Width: =262
+                X: =10
+                Y: =4
+                ZIndex: =1
+
+            "'S1 Sub_3' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            Rectangle3_78 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =165
+                ZIndex: =3
+
+            Rectangle3_79 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =7
+                ZIndex: =4
+
+            "'S1 Location_3' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 3 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =83
+                ZIndex: =5
+
+            "'S1 Description_3' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 3 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =32
+                ZIndex: =6
+
+            Label2_2 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 3 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 3 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =59
+                ZIndex: =7
+
+            "'Email:_25' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =58
+                ZIndex: =8
+
+            "'Email:_26' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =83
+                ZIndex: =9
+
+            "'Email:_27' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =7
+                ZIndex: =10
+
+        "'S4 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =229
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 4 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =7
+            ZIndex: =8
+
+            "'S1 title_8' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 4"
+                Width: =262
+                X: =10
+                Y: =8
+                ZIndex: =1
+
+            "'S1 Sub_4' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =23
+                ZIndex: =2
+
+            Rectangle3_80 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =169
+                ZIndex: =3
+
+            Rectangle3_81 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =11
+                ZIndex: =4
+
+            "'S1 Location_4' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 4 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =87
+                ZIndex: =5
+
+            "'S1 Description_4' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 4 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =36
+                ZIndex: =6
+
+            Label2_3 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 4 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 4 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =63
+                ZIndex: =7
+
+            "'Email:_28' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =62
+                ZIndex: =8
+
+            "'Email:_29' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =87
+                ZIndex: =9
+
+            "'Email:_30' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =11
+                ZIndex: =10
+
+        "'S5 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =193
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 5 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =8
+            ZIndex: =9
+
+            "'S1 title_9' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 5"
+                Width: =262
+                X: =10
+                Y: =8
+                ZIndex: =1
+
+            "'S1 Sub_5' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =23
+                ZIndex: =2
+
+            Rectangle3_82 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =169
+                ZIndex: =3
+
+            Rectangle3_83 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =11
+                ZIndex: =4
+
+            "'S1 Location_5' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 5 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =87
+                ZIndex: =5
+
+            "'S1 Description_5' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 5 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =36
+                ZIndex: =6
+
+            Label2_4 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 5 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 5 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =63
+                ZIndex: =7
+
+            "'Email:_31' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =62
+                ZIndex: =8
+
+            "'Email:_32' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =87
+                ZIndex: =9
+
+            "'Email:_33' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =11
+                ZIndex: =10
+
+        "'S6 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =194
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 6 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =9
+            ZIndex: =10
+
+            "'S1 title_10' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 6"
+                Width: =262
+                X: =9
+                Y: =6
+                ZIndex: =1
+
+            "'S1 Sub_6' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =9
+                Y: =21
+                ZIndex: =2
+
+            Rectangle3_84 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =9
+                Y: =167
+                ZIndex: =3
+
+            Rectangle3_85 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =9
+                ZIndex: =4
+
+            "'S1 Location_6' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 6 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =97
+                Y: =85
+                ZIndex: =5
+
+            "'S1 Description_6' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 6 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =430
+                Y: =34
+                ZIndex: =6
+
+            Label2_5 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 6 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 6 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =97
+                Y: =61
+                ZIndex: =7
+
+            "'Email:_34' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =9
+                Y: =60
+                ZIndex: =8
+
+            "'Email:_35' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =9
+                Y: =85
+                ZIndex: =9
+
+            "'Email:_36' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =430
+                Y: =9
+                ZIndex: =10
+
+        "'S7 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =181
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 7 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =10
+            ZIndex: =11
+
+            "'S1 title_11' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 7"
+                Width: =262
+                X: =9
+                Y: =6
+                ZIndex: =1
+
+            "'S1 Sub_7' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =9
+                Y: =21
+                ZIndex: =2
+
+            Rectangle3_86 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =9
+                Y: =167
+                ZIndex: =3
+
+            Rectangle3_87 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =406
+                Y: =9
+                ZIndex: =4
+
+            "'S1 Location_7' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 7 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =97
+                Y: =85
+                ZIndex: =5
+
+            "'S1 Description_7' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 7 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =430
+                Y: =34
+                ZIndex: =6
+
+            Label2_6 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 7 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 7 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =97
+                Y: =61
+                ZIndex: =7
+
+            "'Email:_37' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =9
+                Y: =60
+                ZIndex: =8
+
+            "'Email:_38' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =9
+                Y: =85
+                ZIndex: =9
+
+            "'Email:_39' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =430
+                Y: =9
+                ZIndex: =10
+
+        "'S8 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =180
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 7 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =11
+            ZIndex: =12
+
+            "'S1 title_12' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 8"
+                Width: =262
+                X: =10
+                Y: =8
+                ZIndex: =1
+
+            "'S1 Sub_8' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =23
+                ZIndex: =2
+
+            Rectangle3_88 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =169
+                ZIndex: =3
+
+            Rectangle3_89 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =407
+                Y: =11
+                ZIndex: =4
+
+            "'S1 Location_8' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 8 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =87
+                ZIndex: =5
+
+            "'S1 Description_8' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 8 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =36
+                ZIndex: =6
+
+            Label2_7 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 8 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 8 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =63
+                ZIndex: =7
+
+            "'Email:_40' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =62
+                ZIndex: =8
+
+            "'Email:_41' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =87
+                ZIndex: =9
+
+            "'Email:_42' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =11
+                ZIndex: =10
+
+        "'S9 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =185
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 9 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =12
+            ZIndex: =13
+
+            "'S1 title_13' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 9"
+                Width: =262
+                X: =10
+                Y: =4
+                ZIndex: =1
+
+            "'S1 Sub_9' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            Rectangle3_90 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =165
+                ZIndex: =3
+
+            Rectangle3_91 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =407
+                Y: =7
+                ZIndex: =4
+
+            "'S1 Location_9' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 9 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =83
+                ZIndex: =5
+
+            "'S1 Description_9' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 9 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =32
+                ZIndex: =6
+
+            Label2_8 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 9 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 9 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =59
+                ZIndex: =7
+
+            "'Email:_43' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =58
+                ZIndex: =8
+
+            "'Email:_44' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =83
+                ZIndex: =9
+
+            "'Email:_45' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =7
+                ZIndex: =10
+
+        "'S10 Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =183
+            Visible: =If(And(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Visit", !IsBlank(Concat(Filter( UserResponses, PAResponseID = varResponseID), 'Serial 9 Description'))), true,false)
+            Width: =948
+            X: =0
+            Y: =13
+            ZIndex: =14
+
+            "'S1 title_14' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =11
+                Text: ="Serial 10"
+                Width: =262
+                X: =10
+                Y: =4
+                ZIndex: =1
+
+            "'S1 Sub_10' As label":
+                FontWeight: =FontWeight.Lighter
+                Size: =9
+                Text: ="Please review details of the serial below."
+                Width: =377
+                X: =10
+                Y: =19
+                ZIndex: =2
+
+            Rectangle3_92 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =165
+                ZIndex: =3
+
+            Rectangle3_93 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =407
+                Y: =7
+                ZIndex: =4
+
+            "'S1 Location_10' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 10 Location'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =83
+                ZIndex: =5
+
+            "'S1 Description_10' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 10 Description'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =119
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =504
+                X: =431
+                Y: =32
+                ZIndex: =6
+
+            Label2_9 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 10 Date') & " " & Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Serial 10 Time'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =98
+                Y: =59
+                ZIndex: =7
+
+            "'Email:_46' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Date & Time: "
+                Width: =88
+                X: =10
+                Y: =58
+                ZIndex: =8
+
+            "'Email:_47' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Location:"
+                Width: =72
+                X: =10
+                Y: =83
+                ZIndex: =9
+
+            "'Email:_48' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Serial Details:"
+                Width: =88
+                X: =431
+                Y: =7
+                ZIndex: =10
+
+        "'Group Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =251
+            Visible: =If(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Official Group", true,false)
+            Width: =948
+            X: =0
+            Y: =14
+            ZIndex: =15
+
+            "'S1 title_15' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Group Photography"
+                Underline: =true
+                Width: =262
+                X: =10
+                Y: =8
+                ZIndex: =1
+
+            Rectangle3_94 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =10
+                Y: =212
+                ZIndex: =3
+
+            Rectangle3_95 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =144
+                Width: =1
+                X: =407
+                Y: =11
+                ZIndex: =4
+
+            "'S1 Location_11' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Group Dress State'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =289
+                X: =98
+                Y: =61
+                ZIndex: =5
+
+            Label2_10 As label:
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Height: =24
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Group Number'))
+                VerticalAlign: =VerticalAlign.Top
+                X: =118
+                Y: =37
+                ZIndex: =7
+
+            "'Email:_49' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Group Numbers:"
+                Width: =108
+                X: =10
+                Y: =36
+                ZIndex: =8
+
+            "'Email:_50' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Dress State:"
+                Width: =88
+                X: =10
+                Y: =61
+                ZIndex: =9
+
+            "'S1 Location_12' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Group Print Size'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =269
+                X: =118
+                Y: =86
+                ZIndex: =10
+
+            "'Email:_51' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Final Print Size:"
+                Width: =108
+                X: =10
+                Y: =86
+                ZIndex: =11
+
+            "'S1 Location_13' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Group Print Size'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =25
+                HintText: =""
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =269
+                X: =10
+                Y: =149
+                ZIndex: =12
+
+            "'Email:_52' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Execs Front Row:"
+                Width: =108
+                X: =10
+                Y: =124
+                ZIndex: =13
+
+            "'S1 Location_14' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Benches&Chairs Organised'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =37
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =441
+                X: =423
+                Y: =49
+                ZIndex: =14
+
+            "'Email:_53' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Benches/Chairs:"
+                Width: =108
+                X: =423
+                Y: =24
+                ZIndex: =15
+
+            "'S1 Location_15' As text":
+                BorderThickness: =1
+                Clear: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                Default: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )), "N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Group Background'))
+                DisplayMode: =DisplayMode.View
+                EnableSpellCheck: =true
+                Height: =37
+                HintText: =""
+                Mode: =TextMode.MultiLine
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =9
+                Width: =441
+                X: =423
+                Y: =118
+                ZIndex: =16
+
+            "'Email:_54' As label":
+                AutoHeight: =true
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Group Background:"
+                Width: =129
+                X: =423
+                Y: =93
+                ZIndex: =17
+
+        "'Portrait Confirm' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =187
+            Visible: =If(Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Project Category') = "Portrait", true,false)
+            Width: =959
+            X: =0
+            Y: =15
+            ZIndex: =16
+
+            "'S2 Title_2' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                Size: =11
+                Text: ="Portraits"
+                Underline: =true
+                Width: =262
+                X: =13
+                Y: =3
+                ZIndex: =1
+
+            Rectangle3_96 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =1
+                Width: =798
+                X: =7
+                Y: =203
+                ZIndex: =2
+
+            Rectangle3_97 As rectangle:
+                Fill: =RGBA(230, 230, 230, 1)
+                Height: =186
+                Width: =1
+                X: =406
+                ZIndex: =3
+
+            "'Rank:_6' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Portrait Type:"
+                Width: =88
+                X: =13
+                Y: =31
+                ZIndex: =4
+
+            "'Rank O365_6' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Portrait Required'))
+                Width: =193
+                X: =101
+                Y: =31
+                ZIndex: =5
+
+            "'Rank:_7' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Portrait Location:"
+                Width: =112
+                X: =13
+                Y: =56
+                ZIndex: =6
+
+            "'Rank O365_7' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Tail Portrait Location'))
+                Width: =78
+                X: =125
+                Y: =56
+                ZIndex: =7
+
+            "'Rank:_8' As label":
+                AutoHeight: =true
+                Size: =9
+                Text: |-
+                    ="Portrait/Board Details:"
+                Width: =145
+                X: =13
+                Y: =81
+                ZIndex: =8
+
+            "'Rank O365_8' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Non-Standard ID Details'))
+                Width: =78
+                X: =18
+                Y: =104
+                ZIndex: =9
+
+            "'Rank:_9' As label":
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: |-
+                    ="No1's Portrait:"
+                Width: =145
+                X: =419
+                Y: =19
+                ZIndex: =10
+
+            "'Rank O365_9' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'No1 Post Nominals'))
+                Width: =78
+                X: =516
+                Y: =43
+                ZIndex: =11
+
+            "'Rank:_10' As label":
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Post Nominals:"
+                Width: =97
+                X: =419
+                Y: =43
+                ZIndex: =12
+
+            "'Rank O365_10' As label":
+                AutoHeight: =true
+                Color: =If(Self.Text = "N/A", RGBA(0, 0, 0, 1), Color.DarkOrange)
+                FontWeight: =FontWeight.Semibold
+                Size: =9
+                Text: =If(IsEmpty(Filter( UserResponses, PAResponseID = varResponseID )),"N/A", Concat( Filter( UserResponses, PAResponseID = varResponseID ), 'Photo Dist'))
+                Width: =78
+                X: =516
+                Y: =67
+                ZIndex: =13
+
+            "'Rank:_11' As label":
+                Height: =25
+                Size: =9
+                Text: |-
+                    ="Distribution:"
+                Width: =97
+                X: =419
+                Y: =67
+                ZIndex: =14
+
+    cmp_Header_11 As cmp_Header:
+        ZIndex: =8
+
+    cmp_FormPosition_10 As cmp_FormPosition:
+        Height: =325
+        Y: =82
+        ZIndex: =9
+
+    Back_17 As button:
+        DisplayMode: =
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =34
+        HoverColor: =Color.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: =Back()
+        Text: ="BACK"
+        Width: =192
+        X: =24
+        Y: =410
+        ZIndex: =10
+
+    Rectangle1_10 As rectangle:
+        BorderColor: =RGBA(255, 191, 0, 1)
+        Fill: =varButtonSeperatorFill
+        Height: =2
+        Width: =1055
+        X: =269
+        Y: =220
+        ZIndex: =11
+
+    Group4_9 As group:
+        Height: =5
+        Width: =5
+        X: =-20
+        Y: =40
+        ZIndex: =188
+
+        HtmlText1_12 As htmlViewer:
+            AutoHeight: =true
+            Height: =Button10_11.Height + 40
+            HtmlText: |
+                ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 1105px; height: 595px; border-radius: 30px'></div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =Button10_11.Width + 40
+            X: =Button10_11.X -20
+            Y: =90
+            ZIndex: =2
+
+        Button10_11 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =595
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =""
+            Width: =1105
+            X: =241
+            Y: =110
+            ZIndex: =3
+

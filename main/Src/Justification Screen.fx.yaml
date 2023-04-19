@@ -1,0 +1,740 @@
+"'Justification Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =varBackgroundFill
+    OnVisible: =Set(varJustificationIcon, Icon.Information)
+
+    "'Sub Heading' As button":
+        Align: =Align.Left
+        BorderThickness: =0
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(254, 203, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =28
+        PaddingBottom: =0
+        PaddingLeft: =50
+        PaddingRight: =0
+        PaddingTop: =0
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =16
+        Text: ="Justification"
+        Width: =1301
+        X: =65
+        Y: =52
+        ZIndex: =5
+
+    "'Justification Text' As htmlViewer":
+        AutoHeight: =true
+        HtmlText: |-
+            ="<div style='text-align:center'>
+            	<p>
+            		<b>
+            			<u>
+            				 Please provide your request Justification
+            			</u>
+            		</b>
+            	</p>
+            	<p>
+            		This is being requested as a result of your rank. This is to protect the system from unauthorised demanders and ensure that responsibility for requests is handled at a line manager level.
+            	</p>
+            </div>
+            "
+        Width: =1055
+        X: =269
+        Y: =110
+        ZIndex: =6
+
+    "'Rank:_1' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Rank:"
+        Width: =65
+        X: =327
+        Y: =320
+        ZIndex: =7
+
+    "'Name:_1' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Name:"
+        Width: =65
+        X: =327
+        Y: =349
+        ZIndex: =8
+
+    "'Email:_1' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Email:"
+        Width: =65
+        X: =327
+        Y: =378
+        ZIndex: =9
+
+    "'Rank O365_1' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfile().JobTitle
+        Width: =328
+        X: =410
+        Y: =320
+        ZIndex: =10
+
+    "'Name O365_1' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfile().GivenName & " " &Office365Users.MyProfile().Surname
+        Width: =328
+        X: =410
+        Y: =349
+        ZIndex: =11
+
+    "'User Email O365_1' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfileV2().mail
+        Width: =328
+        X: =410
+        Y: =376
+        ZIndex: =12
+
+    "'Location:_1' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Location:"
+        Width: =88
+        X: =327
+        Y: =405
+        ZIndex: =13
+
+    "'User Location O365_1' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfileV2().officeLocation
+        Width: =328
+        X: =410
+        Y: =405
+        ZIndex: =14
+
+    "'Your Details Header' As label":
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: ="Your Details"
+        Underline: =true
+        Width: =168
+        X: =327
+        Y: =273
+        ZIndex: =15
+
+    "'LM Details Header' As label":
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: ="Line Managers Details"
+        Underline: =true
+        Width: =283
+        X: =327
+        Y: =502
+        ZIndex: =16
+
+    "'LM Rank:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Rank:"
+        Width: =65
+        X: =327
+        Y: =553
+        ZIndex: =17
+
+    "'LM Name:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Name:"
+        Width: =65
+        X: =327
+        Y: =591
+        ZIndex: =18
+
+    "'LM Email:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Email:"
+        Width: =65
+        X: =327
+        Y: =629
+        ZIndex: =19
+
+    "'LM O365 Data' As combobox":
+        Default: =Blank()
+        DisplayFields: =["DisplayName","GivenName" & " " & "Surname"]
+        DisplayMode: |-
+            =If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)"
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Height: =32
+        InputTextPlaceholder: ="Find items - Surname, Forename"
+        IsSearchable: =false
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:Concatenate('LM Surname'.Value,", ",'LM Forename'.Value),top:10})
+        NoSelectionText: ="Please select individual from dropdown"
+        SearchFields: =["DisplayName"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Template: =ListItemTemplate.Person
+        Width: =510
+        X: =410
+        Y: =629
+        ZIndex: =23
+
+    "'Proceed button' As button":
+        DisplayMode: |-
+            =If(
+                And(
+                    "AC" in gblCurrentUser.jobTitle,
+                    Or(
+                        'LM Rank Dropdown'.Selected.Value = Blank(),
+                        'LM Forename'.Value = "",
+                        'LM Surname'.Value = "",
+                        IsBlank('LM O365 Data'.Selected)
+                    )
+                ),
+                DisplayMode.Disabled,
+                DisplayMode.Edit
+            )
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =34
+        HoverColor: =Color.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: |
+            =Patch(
+                UserResponses,
+                First(
+                    Filter(
+                        UserResponses,
+                        PAResponseID = varResponseID
+                    )
+                ),
+                {
+                    'LM Rank': 'LM Rank Dropdown'.Selected.Value,
+                    'LM Forename': 'LM Forename'.Value,
+                    'LM Surname': 'LM Surname'.Value,
+                    'LM Email': 'LM O365 Data'.Selected.Mail,
+                    'LM Contact Number': Concat('LM O365 Data'.Selected.BusinessPhones, Value),
+                    'LM Section': 'LM O365 Data'.Selected.OfficeLocation,
+                    'LM O365 Data': 'LM O365 Data'.Selected.Mail
+                }
+            );
+            If(
+                'Alternate Contact Check_1'.Value = true,
+                Patch(
+                    UserResponses,
+                    First(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        )
+                    ),
+                    {
+                        'Alt Rank': 'Alt Rank'.Selected.Value,
+                        'Alt Forename': 'Alt Forename'.Value,
+                        'Alt Surname': 'Alt Surname'.Value,
+                        'Alt Email': 'Alt O365'.Selected.Mail,
+                        'Alt Contact': 'Alt O365 Phone'.Value
+                    }
+                )
+            );
+            Set(
+                varJustificationIcon,
+                Icon.CheckBadge
+            );
+            Navigate(
+                'Form Page 1',
+                ScreenTransition.Fade
+            );
+        Text: ="CONTINUE"
+        Width: =118
+        X: =1228
+        Y: =716
+        ZIndex: =24
+
+    Back As button:
+        DisplayMode: =
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =34
+        HoverColor: =Color.White
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: =Back()
+        Text: ="BACK"
+        Width: =192
+        X: =24
+        Y: =410
+        ZIndex: =61
+
+    "'User Phone_1' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Contact:"
+        Width: =88
+        X: =327
+        Y: =435
+        ZIndex: =62
+
+    "'User Phone O365_1' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Concat(Office365Users.MyProfile().BusinessPhones, Value)
+        Width: =328
+        X: =410
+        Y: =435
+        ZIndex: =63
+
+    "'LM Rank:_2' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Rank:"
+        Width: =65
+        X: =717
+        Y: =323
+        ZIndex: =64
+
+    "'LM Name:_2' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Name:"
+        Width: =65
+        X: =717
+        Y: =361
+        ZIndex: =65
+
+    "'LM Email:_2' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Email:"
+        Width: =65
+        X: =717
+        Y: =399
+        ZIndex: =66
+
+    "'Alt O365' As combobox":
+        Default: =Blank()
+        DisplayFields: =["DisplayName","GivenName" & " " & "Surname"]
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        InputTextPlaceholder: ="Find items - Surname, Forename"
+        IsSearchable: =false
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:Concatenate('Alt Surname'.Value,", ",'Alt Forename'.Value),top:10})
+        NoSelectionText: ="Please select individual from dropdown"
+        Reset: =If(Self.DisplayMode = DisplayMode.Disabled, true)
+        SearchFields: =["DisplayName"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Template: =ListItemTemplate.Person
+        Width: =510
+        X: =800
+        Y: =399
+        ZIndex: =70
+
+    "'User Phone_3' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Contact:"
+        Width: =88
+        X: =717
+        Y: =437
+        ZIndex: =71
+
+    Label8_1 As label:
+        Color: =RGBA(255, 0, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Text: ="*If Incorrect then please edit contact number"
+        Visible: =If('Alt O365 Phone'.Value <> "", true, false)
+        Width: =411
+        X: =801
+        Y: =469
+        ZIndex: =73
+
+    "'Your Details Header_2' As label":
+        FontWeight: =FontWeight.Semibold
+        Size: =16
+        Text: ="Alternate Contact Details"
+        Underline: =true
+        Width: =280
+        X: =726
+        Y: =273
+        ZIndex: =74
+
+    "'Alternate Contact Check_1' As checkbox":
+        CheckboxSize: =30
+        Default: =If('Alternate Contact Check'.Value = true, true,false)
+        Height: =39
+        OnUncheck: =
+        Text: ="Alternate Contact Required"
+        Width: =343
+        X: =1003
+        Y: =274
+        ZIndex: =75
+
+    cmp_Header_2 As cmp_Header:
+        ZIndex: =76
+
+    cmp_FormPosition_1 As cmp_FormPosition:
+        Height: =325
+        Y: =82
+        ZIndex: =77
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(255, 191, 0, 1)
+        Fill: =varButtonSeperatorFill
+        Height: =2
+        Width: =1055
+        X: =269
+        Y: =220
+        ZIndex: =78
+
+    "'Rank:_13' As label":
+        AutoHeight: =true
+        Text: ="(JR's Only)"
+        Width: =102
+        X: =563
+        Y: =510
+        ZIndex: =81
+
+    "'Alt Service Dropdown' As Dropdown.pcfdataset":
+        AccessibleLabel: =""
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Items: =[Blank() ,"Royal Air Force", "Royal Navy", "Army", "Royal Marines", "Civil Service", "Civilian"]
+        Width: =245
+        X: =800
+        Y: =323
+        ZIndex: =82
+
+        Value4 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+
+    "'Alt Rank' As Dropdown.pcfdataset":
+        DisplayMode: |
+            =If('Alternate Contact Check_1'.Value = true && !IsBlank('Alt Service Dropdown'.Selected.Value), DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Items: |-
+            =Switch(
+                'Alt Service Dropdown'.Selected.Value,
+                "Royal Air Force",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Flight Sergeant",
+                    "Chief Technician",
+                    "Warrant Officer",
+                    "Master Aircrew",
+                    "Pilot Officer",
+                    "Flying Officer",
+                    "Flight Lieutenant",
+                    "Squadron Leader",
+                    "Wing Commander",
+                    "Group Captain",
+                ],
+                "Royal Navy",
+                [
+                    "Leading Hand",
+                    "Petty Officer",
+                    "Chief Petty Officer",
+                    "Warrant Officer 2",
+                    "Warrant Officer 1",
+                    "Sub Lieutenant",
+                    "Lieutenant",
+                    "Lieutenant Commander",
+                    "Commander",
+                    "Captain"
+                ],
+                "Royal Marines",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Staff Sergeant",
+                    "Colour Sergeant",
+                    "Warrant Officer Class 2",
+                    "Warrant Officer Class 1",
+                    "Second Lieutenant",
+                    "Lieutenant",
+                    "Captain",
+                    "Major",
+                    "Lieutenant Colonel",
+                    "Colonel"
+                ],
+                "Army",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Staff Sergeant",
+                    "Colour Sergeant",
+                    "Warrant Officer Class 2",
+                    "Warrant Officer Class 1",
+                    "Second Lieutenant",
+                    "Lieutenant",
+                    "Captain",
+                    "Major",
+                    "Lieutenant Colonel",
+                    "Colonel"
+                ],
+                "Civil Service",
+                [
+                    "E2",
+                    "E1",
+                    "D",
+                    "C2",
+                    "C1",
+                    "B2",
+                    "B1"
+                ],
+                "Civilian",
+                [
+                    "Mr",
+                    "Mrs",
+                    "Miss",
+                    "Ms",
+                    "Mx"
+                ]
+            )
+        Width: =254
+        X: =1056
+        Y: =323
+        ZIndex: =83
+
+        Value5 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =2
+
+    "'Alt Forename' As 'Text input'":
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Width: =245
+        X: =800
+        Y: =361
+        ZIndex: =84
+
+    "'Alt Surname' As 'Text input'":
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Width: =254
+        X: =1056
+        Y: =361
+        ZIndex: =85
+
+    "'Alt O365 Phone' As 'Text input'":
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Value: =Concat('Alt O365'.Selected.BusinessPhones, Value)
+        Width: =320
+        X: =800
+        Y: =437
+        ZIndex: =86
+
+    "'LM Service Dropdown' As Dropdown.pcfdataset":
+        DefaultSelectedItems: =Blank()
+        DisplayMode: |-
+            =If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)"
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Height: =32
+        Items: =[Blank() ,"Royal Air Force", "Royal Navy", "Army", "Royal Marines", "Civil Service", "Civilian"]
+        Width: =245
+        X: =410
+        Y: =551
+        ZIndex: =87
+
+    "'LM Rank Dropdown' As Dropdown.pcfdataset":
+        DisplayMode: =If(IsBlank('LM Service Dropdown'.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
+        Height: =32
+        Items: |-
+            =Switch(
+                'LM Service Dropdown'.Selected.Value,
+                "Royal Air Force",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Flight Sergeant",
+                    "Chief Technician",
+                    "Warrant Officer",
+                    "Master Aircrew",
+                    "Pilot Officer",
+                    "Flying Officer",
+                    "Flight Lieutenant",
+                    "Squadron Leader",
+                    "Wing Commander",
+                    "Group Captain",
+                ],
+                "Royal Navy",
+                [
+                    "Leading Hand",
+                    "Petty Officer",
+                    "Chief Petty Officer",
+                    "Warrant Officer 2",
+                    "Warrant Officer 1",
+                    "Sub Lieutenant",
+                    "Lieutenant",
+                    "Lieutenant Commander",
+                    "Commander",
+                    "Captain"
+                ],
+                "Royal Marines",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Staff Sergeant",
+                    "Colour Sergeant",
+                    "Warrant Officer Class 2",
+                    "Warrant Officer Class 1",
+                    "Second Lieutenant",
+                    "Lieutenant",
+                    "Captain",
+                    "Major",
+                    "Lieutenant Colonel",
+                    "Colonel"
+                ],
+                "Army",
+                [
+                    "Corporal",
+                    "Sergeant",
+                    "Staff Sergeant",
+                    "Colour Sergeant",
+                    "Warrant Officer Class 2",
+                    "Warrant Officer Class 1",
+                    "Second Lieutenant",
+                    "Lieutenant",
+                    "Captain",
+                    "Major",
+                    "Lieutenant Colonel",
+                    "Colonel"
+                ],
+                "Civil Service",
+                [
+                    "E2",
+                    "E1",
+                    "D",
+                    "C2",
+                    "C1",
+                    "B2",
+                    "B1"
+                ],
+                "Civilian",
+                [
+                    "Mr",
+                    "Mrs",
+                    "Miss",
+                    "Ms",
+                    "Mx"
+                ]
+            )
+        Width: =255
+        X: =665
+        Y: =551
+        ZIndex: =88
+
+    "'LM Forename' As 'Text input'":
+        DisplayMode: |-
+            =If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)"
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Height: =32
+        Width: =245
+        X: =410
+        Y: =591
+        ZIndex: =89
+
+    "'LM Surname' As 'Text input'":
+        DisplayMode: |-
+            =If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)"
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Height: =32
+        Width: =254
+        X: =665
+        Y: =591
+        ZIndex: =90
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =156
+
+        HtmlText1_2 As htmlViewer:
+            AutoHeight: =true
+            Height: =Button10_2.Height + 40
+            HtmlText: |
+                ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 1105px; height: 595px; border-radius: 30px'></div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =Button10_2.Width + 40
+            X: =Button10_2.X -20
+            Y: =90
+            ZIndex: =1
+
+        Button10_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =595
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =""
+            Width: =1105
+            X: =241
+            Y: =110
+            ZIndex: =2
+

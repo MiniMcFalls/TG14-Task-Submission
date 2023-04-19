@@ -1,0 +1,635 @@
+Home As screen:
+    Fill: =varBackgroundFill
+    OnHidden: =
+    OnVisible: |
+        =Reset('Agreement Statement Radio');
+        Set(SubmitVis, false);
+        // Set navigation icons
+        Set(
+            varHomeIcon,
+            Icon.Blocked
+        );
+        Set(
+            varJustificationIcon,
+            Icon.Blocked
+        );
+        Set(
+            varTaskDetIcon,
+            Icon.Blocked
+        );
+        Set(
+            varTaskDetContIcon,
+            Icon.Blocked
+        );
+        Set(
+            varVisitDetIcon,
+            Icon.Blocked
+        );
+        Set(
+            varVisitDetContIcon,
+            Icon.Blocked
+        );
+        Set(
+            varOfficialGroupIcon,
+            Icon.Blocked
+        );
+        Set(
+            varPortraitsIcon,
+            Icon.Blocked
+        );
+        Set(
+            varConfirmationIcon,
+            Icon.Blocked
+        );
+        Set(
+            varMediaPRIcon,
+            Icon.Blocked
+        );
+        Set(
+            varMediaPRContIcon,
+            Icon.Blocked
+        );
+
+    cmp_Header_1 As cmp_Header:
+
+    "'Welcome Message' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =136
+        Text: |-
+            ="Good Morning "& gblCurrentUser.givenName & ", Use this form to submit a request for TG14 photographic support.
+            
+            Double check your details listed below as these will be attached to the request and used as a primary contact method should contact need to be made."
+        Width: =598
+        X: =35
+        Y: =299
+        ZIndex: =6
+
+    "'Rank:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Rank:"
+        Width: =65
+        X: =101
+        Y: =458
+        ZIndex: =7
+
+    "'Name:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Name:"
+        Width: =65
+        X: =101
+        Y: =487
+        ZIndex: =8
+
+    "'Email:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Email:"
+        Width: =65
+        X: =101
+        Y: =516
+        ZIndex: =9
+
+    "'Rank O365' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =If(Office365Users.MyProfile().JobTitle = "LAC", "AS2", Office365Users.MyProfile().JobTitle = "SAC", "AS1", Office365Users.MyProfile().JobTitle = "SAC(T)", "A1(T)", Office365Users.MyProfile().JobTitle)
+        Width: =328
+        X: =184
+        Y: =458
+        ZIndex: =10
+
+    "'Name O365' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfile().GivenName & " " &Office365Users.MyProfile().Surname
+        Width: =328
+        X: =184
+        Y: =487
+        ZIndex: =11
+
+    "'User Email O365' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfileV2().mail
+        Width: =328
+        X: =184
+        Y: =514
+        ZIndex: =12
+
+    "'Location:' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Location:"
+        Width: =88
+        X: =101
+        Y: =543
+        ZIndex: =13
+
+    "'User Location O365' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Office365Users.MyProfileV2().officeLocation
+        Width: =328
+        X: =184
+        Y: =543
+        ZIndex: =14
+
+    "'Main Statement L' As htmlViewer":
+        Height: =350
+        HtmlText: |-
+            ="<p>This form is to be used to request photographic or videography services from a TG14 photographic section. Once your information has been submitted, it will be forwarded to the relevant section for review. Please allow 2 working days for a decision to be made.</p>
+            <p><strong>Your submission will ONLY be reviewed within the sections normal working hours. </strong></p>
+            <p><strong>These are 08:00 - 17:00 Monday to Thursday, Friday 08:00 - 12:30, however these times are subject to local changes at short notice. </strong></p>
+            <p><strong>Your request will NOT be reviewed if submitted after 16:30 until the following working day after 08:00.</strong></p>
+            <p>You will receive an automated email after you have completed you submission including a confirmation of your job number. Should you need to ammend any details pertaining to your request then you will need this number when contacting the section.</p>
+            <p>&nbsp;</p>
+            <p>If you are looking for information relating to an ID Photograph then please click the link below:</p>"
+        Size: =9
+        Width: =627
+        X: =712
+        Y: =108
+        ZIndex: =15
+
+    "'Agree Text' As label":
+        AutoHeight: =true
+        Height: =56
+        Size: =10
+        Text: ="By agreeing below you understand that the priority assigned against your request is based on the criteria stated above and you agree the information provided to us in this form is correct and accurate to the best of your knowledge."
+        Width: =634
+        X: =712
+        Y: =571
+        ZIndex: =16
+
+    "'Vert Divider_1' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderThickness: =4
+        Height: =3
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =550
+        X: =749
+        Y: =459
+        ZIndex: =17
+
+    "'Agreement Statement Radio' As radio":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Default: ="I Disagree"
+        FontWeight: =FontWeight.Semibold
+        Height: =63
+        HoverColor: =RGBA(0, 0, 0, 1)
+        Items: =["I Agree", "I Disagree"]
+        OnChange: =If(Self.Selected.Value = "I Disagree", Set(SubmitVis, false))
+        OnSelect: =If(Self.Selected.Value = "I Agree", Set(SubmitVis, true), Set(SubmitVis, false))
+        PaddingBottom: =0
+        RadioSize: =20
+        Size: =10
+        X: =712
+        Y: =634
+        ZIndex: =18
+
+    "'User Phone' As label":
+        AutoHeight: =true
+        Text: |-
+            ="Contact:"
+        Width: =88
+        X: =101
+        Y: =572
+        ZIndex: =19
+
+    "'User Phone O365' As label":
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =Concat(Office365Users.MyProfile().BusinessPhones, Value)
+        Width: =328
+        X: =184
+        Y: =572
+        ZIndex: =20
+
+    "'Agree Text_1' As label":
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Size: =10
+        Text: |-
+            ="Please select your local photographic section below to continue:"
+        Underline: =true
+        Width: =627
+        X: =712
+        Y: =486
+        ZIndex: =21
+
+    "'Vert Divider' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varButtonSeperatorFill
+        FocusedBorderThickness: =4
+        Height: =650
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =3
+        X: =679
+        Y: =80
+        ZIndex: =22
+
+    Circle1_3 As circle:
+        Fill: =RGBA(167, 182, 203, 0.1)
+        Height: =180
+        Width: =180
+        X: =243
+        Y: =99
+        ZIndex: =23
+
+    Circle1_2 As circle:
+        Fill: =RGBA(167, 182, 203, 0.25)
+        Height: =175
+        Width: =175
+        X: =246
+        Y: =101
+        ZIndex: =24
+
+    Circle1_1 As circle:
+        Fill: =RGBA(167, 182, 203, 0.5)
+        Height: =170
+        Width: =170
+        X: =249
+        Y: =104
+        ZIndex: =25
+
+    Circle1 As circle:
+        Fill: =RGBA(167, 182, 203, 1)
+        Height: =165
+        Width: =165
+        X: =251
+        Y: =106
+        ZIndex: =26
+
+    Image4 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =160
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =User().Image
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        RadiusBottomLeft: =Self.Width
+        RadiusBottomRight: =Self.Width
+        RadiusTopLeft: =Self.Width
+        RadiusTopRight: =Self.Width
+        Width: =160
+        X: =254
+        Y: =109
+        ZIndex: =27
+
+    Unit As label:
+        Text: |-
+            =Switch(
+                            gblSubmitLocation,
+                            "RAF Lossiemouth",
+                            "Lossiemouth",
+                            "RAF Waddington",
+                            "Waddington",
+                            "RAF Coningsby",
+                            "Coningsby",
+                            "RAF Benson",
+                            "Benson",
+                            "RAF Leeming",
+                            "Leeming",
+                            "RAF Brize Norton",
+                            "Brize Photo"
+            )
+        Visible: =false
+        X: =1045
+        Y: =523
+        ZIndex: =28
+
+    Dropdown1 As Dropdown.pcfdataset:
+        DefaultSelectedItems: =Blank()
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: =[Blank(),"RAF Lossiemouth","RAF Waddington","RAF Leeming","RAF Brize Norton", "RAF Coningsby", "RAF Benson"]
+        Required: =true
+        Width: =328
+        X: =717
+        Y: =527
+        ZIndex: =29
+
+        Value6 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+
+    ButtonCanvas1 As Button:
+        Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Secondary
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Navigate('ID Information', ScreenTransition.Fade)
+        Text: ="ID Information"
+        Width: =160
+        X: =944
+        Y: =412
+        ZIndex: =30
+
+    ButtonCanvas2 As Button:
+        Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Primary
+        DisplayMode: =If(Dropdown1.Selected.Value = Blank(),DisplayMode.Disabled, DisplayMode.Edit)
+        Height: =34
+        OnSelect: |-
+            =Refresh('TG14 Task Information') && Notify(
+                "Please Wait",
+                NotificationType.Information
+            );
+            Set(
+                gblSubmitLocation,
+                Dropdown1.Selected.Value
+            );
+            Set(varResponseID, Patch(
+                'TG14 Task Information',
+                Defaults('TG14 Task Information'),
+                {
+                    'Approval Status': {Value: "Pinned"},
+                    Rank: CurrentUser.JobTitle,
+                    'Customer Name':Concatenate(CurrentUser.GivenName & " " & CurrentUser.Surname),
+                    'Customer Email': CurrentUser.Mail,
+                    'Customer Section': CurrentUser.OfficeLocation,
+                    'Customer Contact Number': Concat(
+                        CurrentUser.BusinessPhones,
+                        Value
+                    ),
+                    'Date Submitted': Now(),
+                    Unit: {Value: Unit.Text}
+                }
+            ).ID);
+            ClearCollect(
+                UserResponses,
+                {
+                    //Response ID
+                    PAResponseID: varResponseID,
+                    //Agreement Statement
+                    'Agreement Statement': 'Agreement Statement Radio'.Selected.Value,
+                    //Customer Info
+                    'Cust Rank': CurrentUser.JobTitle,
+                    'Cust Forename': CurrentUser.GivenName,
+                    'Cust Surname': CurrentUser.Surname,
+                    'Cust Email': CurrentUser.Mail,
+                    'Cust Location': CurrentUser.OfficeLocation,
+                    'Contact Number': Concat(
+                        CurrentUser.BusinessPhones,
+                        Value
+                    ),
+                    //Different POC
+                    'Diff POC': "",
+                    //Line Management Info
+                    'LM Rank': "",
+                    'LM Forename': "",
+                    'LM Surname': "",
+                    'LM Email': "",
+                    'LM Section': "",
+                    'LM Contact Number': "",
+                    'LM O365 Data': "",
+                    //Alternate Contact
+                    'Alt Rank': "",
+                    'Alt Forename': "",
+                    'Alt Surname': "",
+                    'Alt Email': "",
+                    'Alt Contact': "",
+                    //Task Info
+                    'Task Date': "",
+                    'Start Time': "",
+                    'Task Location': "",
+                    'Service Required': "",
+                    'Task requirements': "",
+                    'AC Tail Number': "",
+                    'Product Deadline': "",
+                    'Working Hazards': "",
+                    TLB: "",
+                    'Project Category': "",
+                    //Media/PR Cont.
+                    'Publishing Channels': "",
+                    'Basic Metadata': "",
+                    'Package Format': "",
+                    'Editing Requests': "",
+                    'Delivery Method': "",
+                    'Product Embargo': "",
+                    'Product Embargo Date': "",
+                    'T&S UIN': "",
+                    'Any Other Details': "",
+                    //Visit Cat
+                    Visitor: "",
+                    'VI Link': "",
+                    'Serial 1 Time': "",
+                    'Serial 1 Location': "",
+                    'Serial 1 Description': "",
+                    'Serial 1 Date': "",
+                    'Serial 2 Time': "",
+                    'Serial 2 Location': "",
+                    'Serial 2 Description': "",
+                    'Serial 2 Date': "",
+                    'Serial 3 Time': "",
+                    'Serial 3 Location': "",
+                    'Serial 3 Description': "",
+                    'Serial 3 Date': "",
+                    'Serial 4 Time': "",
+                    'Serial 4 Location': "",
+                    'Serial 4 Description': "",
+                    'Serial 4 Date': "",
+                    'Serial 5 Time': "",
+                    'Serial 5 Location': "",
+                    'Serial 5 Description': "",
+                    'Serial 5 Date': "",
+                    'Serial 6 Time': "",
+                    'Serial 6 Location': "",
+                    'Serial 6 Description': "",
+                    'Serial 6 Date': "",
+                    'Serial 7 Time': "",
+                    'Serial 7 Location': "",
+                    'Serial 7 Description': "",
+                    'Serial 7 Date': "",
+                    'Serial 8 Time': "",
+                    'Serial 8 Location': "",
+                    'Serial 8 Description': "",
+                    'Serial 8 Date': "",
+                    'Serial 9 Time': "",
+                    'Serial 9 Location': "",
+                    'Serial 9 Description': "",
+                    'Serial 9 Date': "",
+                    'Serial 10 Time': "",
+                    'Serial 10 Location': "",
+                    'Serial 10 Description': "",
+                    'Serial 10 Date': "",
+                    'OOO Serials': "",
+                    'Visit Dress State': "",
+                    //Groups
+                    'Group Number': "",
+                    'Group Dress State': "",
+                    'Group Background': "",
+                    'Execs Front Row': "",
+                    'Benches&Chairs Organised': "",
+                    'Group Print Size': "",
+                    //Portraits
+                    'Portrait Required': "",
+                    'No1 Post Nominals': "",
+                    'Photo Dist': "",
+                    'Tail Portrait Location': "",
+                    'Non-Standard ID Details': ""
+                }
+            );
+            Set(
+                varHomeCheckVis,
+                true
+            );
+            If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)",
+                    'Alternate Contact Check'.Checked = true
+                ),
+                Navigate(
+                    'Justification Screen',
+                    ScreenTransition.Fade
+                ),
+                Navigate(
+                    'Form Page 1',
+                    ScreenTransition.Fade
+                )
+            );
+            Set(
+                varHomeIcon,
+                Icon.CheckBadge
+            );
+        Text: ="PROCEED"
+        Visible: =SubmitVis
+        Width: =288
+        X: =881
+        Y: =688
+        ZIndex: =31
+
+    "'Alternate Contact Check' As Checkbox":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Alternate Contact Required"
+        Width: =227
+        X: =101
+        Y: =615
+        ZIndex: =32
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =40
+        ZIndex: =38
+
+        Button10_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =648
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =""
+            Width: =644
+            X: =702
+            Y: =80
+            ZIndex: =2
+
+        HtmlText1_1 As htmlViewer:
+            Height: =Button10_1.Height + 40
+            HtmlText: |
+                ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 644px; height: 647px; border-radius: 30px'></div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =Button10_1.Width+ 40
+            X: =682
+            Y: =60
+            ZIndex: =3
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =38
+
+        HtmlText1 As htmlViewer:
+            Height: =Button10.Height + 40
+            HtmlText: |
+                ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 20px; width: 644px; height: 647px; border-radius: 30px'></div>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Width: =Button10.Width+ 40
+            X: =Button10.X -20
+            Y: =Button10.Y -20
+            ZIndex: =4
+
+        Button10 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =varPillBackground
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            Height: =648
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =30
+            RadiusBottomRight: =30
+            RadiusTopLeft: =30
+            RadiusTopRight: =30
+            Text: =""
+            Width: =644
+            X: =16
+            Y: =80
+            ZIndex: =5
+

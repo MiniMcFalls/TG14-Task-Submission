@@ -1,0 +1,183 @@
+{
+  "15136b6f-cc25-4a47-9e5b-af29192ffea4": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "a9f4091c-9728-4a8a-bd34-b878d1b9ae27": {
+          "value": "shared_excelonlinebusiness"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "59ad15bb-38c9-42bd-8595-f7f150768dd9"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_excelonlinebusiness": {
+          "value": "a9f4091c-9728-4a8a-bd34-b878d1b9ae27"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "59ad15bb-38c9-42bd-8595-f7f150768dd9"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "LossiePS-TaskSubmission"
+    ],
+    "dependencies": {
+      "shared_excelonlinebusiness": "a9f4091c-9728-4a8a-bd34-b878d1b9ae27"
+    },
+    "dependents": [],
+    "id": "15136b6f-cc25-4a47-9e5b-af29192ffea4"
+  },
+  "33463c70-a57d-4dfa-a51a-d4aa39750d80": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://modgovuk.sharepoint.com/teams/13793": {
+        "dataSources": {
+          "1177 Task Register 2022": {
+            "tableName": "589d524c-0042-4580-9712-c40ff859c5fa"
+          },
+          "1177 Task Register 2023": {
+            "tableName": "d5ebdbdd-d57c-415c-ab9a-120d3730c735"
+          },
+          "1177 Task Register 2024": {
+            "tableName": "091eb9c3-1134-4266-9ca1-c12bfcc1da0a"
+          },
+          "TG14 App Versions": {
+            "tableName": "d402ea8d-bef6-48c9-880d-b520bf40ae71"
+          },
+          "TG14 Task Information": {
+            "tableName": "f60eb741-46eb-47be-804b-6992baa2673a"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "1177 Task Register 2022",
+      "1177 Task Register 2023",
+      "1177 Task Register 2024",
+      "TG14 App Versions",
+      "TG14 Task Information"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "33463c70-a57d-4dfa-a51a-d4aa39750d80"
+  },
+  "9dab3f21-0d3a-439f-aa3d-b6fb75afbc7f": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "c5664d64-edcc-45e0-ad44-fdcc77e040b9": {
+          "value": "shared_office365"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "9c465a35-1160-4e08-a4e1-8408fdea94e2"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "c5664d64-edcc-45e0-ad44-fdcc77e040b9"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "9c465a35-1160-4e08-a4e1-8408fdea94e2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "LossiePS-CustEmailGenerate"
+    ],
+    "dependencies": {
+      "shared_office365": "c5664d64-edcc-45e0-ad44-fdcc77e040b9"
+    },
+    "dependents": [],
+    "id": "9dab3f21-0d3a-439f-aa3d-b6fb75afbc7f"
+  },
+  "a500c34f-1f6f-4846-b808-d0ee3230113d": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Groups",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1626/1.0.1626.3238/office365groups/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Groups"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a500c34f-1f6f-4846-b808-d0ee3230113d"
+  },
+  "a9f4091c-9728-4a8a-bd34-b878d1b9ae27": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3202/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "15136b6f-cc25-4a47-9e5b-af29192ffea4"
+    ],
+    "id": "a9f4091c-9728-4a8a-bd34-b878d1b9ae27"
+  },
+  "c5664d64-edcc-45e0-ad44-fdcc77e040b9": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1626/1.0.1626.3238/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "9dab3f21-0d3a-439f-aa3d-b6fb75afbc7f"
+    ],
+    "id": "c5664d64-edcc-45e0-ad44-fdcc77e040b9"
+  },
+  "ceae6a30-c7d1-4314-8b0c-6cc423449ae2": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1626/1.0.1626.3238/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ceae6a30-c7d1-4314-8b0c-6cc423449ae2"
+  }
+}

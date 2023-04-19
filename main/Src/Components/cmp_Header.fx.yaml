@@ -1,0 +1,96 @@
+cmp_Header As CanvasComponent:
+    Fill: =RGBA(0,0,0,0)
+    Height: =80
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    RectQuickActionBar1_29 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        Fill: =varHeaderFill
+        Height: =53
+        Width: =1366
+        ZIndex: =1
+
+    LblAppName1_6 As label:
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        PaddingLeft: =20
+        PaddingTop: =2
+        Size: =16
+        Text: ="TG14 Photographic Services Request"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =395
+        Wrap: =false
+        X: =96
+        ZIndex: =2
+
+    Label9_13 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 0.5)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =20
+        PaddingBottom: =0
+        PaddingLeft: =20
+        Text: =CurrentVer
+        VerticalAlign: =VerticalAlign.Bottom
+        X: =97
+        Y: =32
+        ZIndex: =3
+
+    Triangle1_9 As triangle.rightAngled:
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(220, 220, 220, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =80
+        Width: =96
+        ZIndex: =4
+
+    Rectangle2_21 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        Width: =5
+        X: =73
+        ZIndex: =5
+
+    Rectangle2_22 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        Width: =5
+        X: =82
+        ZIndex: =6
+
+    Rectangle2_23 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =varBackgroundFill
+        FocusedBorderThickness: =4
+        Height: =53
+        Width: =5
+        X: =91
+        ZIndex: =7
+

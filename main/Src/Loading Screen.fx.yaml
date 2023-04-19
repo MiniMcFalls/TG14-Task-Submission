@@ -1,0 +1,193 @@
+"'Loading Screen' As screen":
+    BackgroundImage: ='Phot Open Screen 01-01-01'
+    Fill: =varBackgroundFill
+    OnVisible: =
+
+    Timer4 As timer:
+        AutoStart: =true
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Duration: =2000
+        Fill: =RGBA(0, 120, 212, 1)
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |
+            =If(
+                CurrentVer <> LatestVer.'Vers Num',
+                'Wrong Version'
+            );
+            //Maintenance Mode Check
+            If(First(Filter('TG14 App Versions', Title = "Maintenance Mode")).'Yes/No' = true,Navigate(Maintenence, ScreenTransition.Fade),Navigate(
+                Home,
+                ScreenTransition.Fade));
+                
+            // Set navigation icons
+            Set(
+                varHomeIcon,
+                Icon.Blocked
+            );
+            Set(
+                varJustificationIcon,
+                Icon.Blocked
+            );
+            Set(
+                varTaskDetIcon,
+                Icon.Blocked
+            );
+            Set(
+                varTaskDetContIcon,
+                Icon.Blocked
+            );
+            Set(
+                varVisitDetIcon,
+                Icon.Blocked
+            );
+            Set(
+                varVisitDetContIcon,
+                Icon.Blocked
+            );
+            Set(
+                varOfficialGroupIcon,
+                Icon.Blocked
+            );
+            Set(
+                varPortraitsIcon,
+                Icon.Blocked
+            );
+            Set(
+                varConfirmationIcon,
+                Icon.Blocked
+            );
+            Set(
+                varMediaPRIcon,
+                Icon.Blocked
+            );
+            Set(
+                varMediaPRContIcon,
+                Icon.Blocked
+            );
+            Set(
+                CurrentUser,
+                Office365Users.MyProfile()
+            );
+            Clear(UserResponses);
+        OnTimerStart: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Visible: =false
+        X: =80
+        Y: =80
+        ZIndex: =9
+
+    LblSuccessMsg3_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        Font: =Font.'Segoe UI'
+        Height: =210
+        Size: =15
+        Text: |-
+            =If(Hour(Now()) <= 12 , "Good Morning", "Good Afternoon") &
+            ",
+            Please standby as we check your access permissions.
+            
+            This shouldn't take long"
+        Width: =673
+        X: =692
+        Y: =297
+        ZIndex: =11
+
+    Spinner1 As Spinner:
+        Appearance: ='PowerApps.CoreControls.Spinner.Appearance'.Primary
+        DisplayMode: =DisplayMode.Edit
+        Height: =106
+        SpinnerSize: ='PowerApps.CoreControls.Spinner.SpinnerSize'.Huge
+        Width: =200
+        X: =928
+        Y: =467
+        ZIndex: =18
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =8
+        Y: =40
+        ZIndex: =19
+
+        iconCircle3_8 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(60, 110, 113, 10%)
+            Height: =120
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =120
+            X: =968
+            Y: =186
+            ZIndex: =12
+
+        iconCircle3_9 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(60, 110, 113, 30%)
+            Height: =111
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =111
+            X: =973
+            Y: =191
+            ZIndex: =13
+
+        iconCircle3_10 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(60, 110, 113, 60%)
+            Height: =102
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =102
+            X: =977
+            Y: =195
+            ZIndex: =14
+
+        iconCircle3_11 As circle.Circle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 120, 212, 1)
+            Fill: =RGBA(60, 110, 113, 80%)
+            Height: =92
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =92
+            X: =982
+            Y: =200
+            ZIndex: =15
+
+        iconCheck3_2 As icon.Check:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            Height: =101
+            Icon: =Icon.Lock
+            PaddingBottom: =Self.PaddingTop
+            PaddingLeft: =Self.PaddingTop
+            PaddingRight: =Self.PaddingTop
+            PaddingTop: =24
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =101
+            X: =978
+            Y: =193
+            ZIndex: =16
+

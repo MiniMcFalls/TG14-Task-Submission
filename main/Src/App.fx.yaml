@@ -1,0 +1,131 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Refresh('TG14 App Versions');
+        
+        // Set Current Version
+        ClearCollect(
+            Version,
+            {
+                'Current Version': First(
+                    Filter(
+                        'TG14 App Versions',
+                        Title = "TG14 Photographic Support Request"
+                    )
+                ).'Vers Num'
+            }
+        );
+        Set(
+            CurrentVer,
+            Concat(
+                Filter(
+                    Version,
+                    'Current Version'
+                ),
+                'Current Version'
+            )
+        );
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
+        Set(
+            gblCurrentUser,
+            Office365Users.UserProfileV2(User().Email)
+        );
+        // Version Patch (for OnStart)
+        Patch(
+            'TG14 App Versions',
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            ),
+            {'Vers Num': CurrentVer}
+        );
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
+        
+        
+        // Set Colour Variables
+        Set(
+            varButtonFill,
+            RGBA(
+                40,
+                75,
+                99,
+                1
+            )
+        );
+        Set(
+            varButtonHover,
+            ColorFade(
+                varButtonFill,
+                -10%
+            )
+        );
+        Set(
+            varButtonPressedFill,
+            ColorFade(
+                varButtonFill,
+                -30%
+            )
+        );
+        Set(
+            varButtonBorderFill,
+            ColorFade(
+                varButtonFill,
+                -50%
+            )
+        );
+        Set(
+            varButtonSeperatorFill,
+            RGBA(
+                79,
+                109,
+                122,
+                1
+            )
+        );
+        Set(
+            varBackgroundFill,
+            RGBA(
+                192,
+                214,
+                223,
+                1
+            )
+        );
+        Set(
+            varHeaderFill,
+            RGBA(
+                79,
+                109,
+                122,
+                1
+            )
+        );
+        Set(
+            varPillBackground,
+            RGBA(
+                234,
+                234,
+                234,
+                1
+            )
+        );
+    StartScreen: ='Loading Screen'
+
