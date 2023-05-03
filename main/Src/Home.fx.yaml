@@ -504,6 +504,10 @@ Home As screen:
                     CurrentUser.JobTitle = "LAC",
                     CurrentUser.JobTitle = "SAC",
                     CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)",
                     'Alternate Contact Check'.Checked = true
                 ),
                 Navigate(

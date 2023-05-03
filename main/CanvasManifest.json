@@ -13,6 +13,7 @@
       "allowmultiplescreensincanvaspages": false,
       "appinsightserrortracing": true,
       "appinstrumentationcorrelationtracing": true,
+      "asyncnodedelegation": false,
       "autocreateenvironmentvariables": false,
       "backfromhostaction": false,
       "behaviorpropertyui": true,
@@ -62,6 +63,7 @@
       "herocontrols": false,
       "improvedmediacapture": false,
       "improvedtabstopbehavior": true,
+      "impurenodedelegation": false,
       "keeprecentscreensloaded": true,
       "longlivingcache": false,
       "mobilenativerendering": false,
@@ -92,6 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
+    "BindingErrorCount": 0,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -109,7 +112,8 @@
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
     "Name": "TG14 Photographic Support Request",
-    "OriginatingVersion": "1.321"
+    "OriginatingVersion": "1.321",
+    "ParserErrorCount": 0
   },
   "PublishInfo": {
     "AppName": "TG14 Photographic Support Request",

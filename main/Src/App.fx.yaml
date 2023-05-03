@@ -129,3 +129,10 @@ App As appinfo:
         );
     StartScreen: ='Loading Screen'
 
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

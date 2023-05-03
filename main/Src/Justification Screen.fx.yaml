@@ -173,7 +173,11 @@
                     CurrentUser.JobTitle = "AC",
                     CurrentUser.JobTitle = "LAC",
                     CurrentUser.JobTitle = "SAC",
-                    CurrentUser.JobTitle = "SAC(T)"
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -197,13 +201,12 @@
         DisplayMode: |-
             =If(
                 And(
-                    "AC" in gblCurrentUser.jobTitle,
                     Or(
-                        'LM Rank Dropdown'.Selected.Value = Blank(),
-                        'LM Forename'.Value = "",
-                        'LM Surname'.Value = "",
-                        IsBlank('LM O365 Data'.Selected)
-                    )
+                        "AC" in gblCurrentUser.jobTitle,
+                        "AS" in gblCurrentUser.jobTitle,
+                        "AR" in gblCurrentUser.jobTitle
+                    ),
+                    IsBlank('LM O365 Data'.Selected)
                 ),
                 DisplayMode.Disabled,
                 DisplayMode.Edit
@@ -373,7 +376,7 @@
 
     "'Alternate Contact Check_1' As checkbox":
         CheckboxSize: =30
-        Default: =If('Alternate Contact Check'.Value = true, true,false)
+        Default: =If('Alternate Contact Check'.Checked = true, true,false)
         Height: =39
         OnUncheck: =
         Text: ="Alternate Contact Required"
@@ -556,7 +559,11 @@
                     CurrentUser.JobTitle = "AC",
                     CurrentUser.JobTitle = "LAC",
                     CurrentUser.JobTitle = "SAC",
-                    CurrentUser.JobTitle = "SAC(T)"
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -567,6 +574,14 @@
         X: =410
         Y: =551
         ZIndex: =87
+
+        Value14 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =4
 
     "'LM Rank Dropdown' As Dropdown.pcfdataset":
         DisplayMode: =If(IsBlank('LM Service Dropdown'.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
@@ -656,6 +671,14 @@
         Y: =551
         ZIndex: =88
 
+        Value13 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =3
+
     "'LM Forename' As 'Text input'":
         DisplayMode: |-
             =If(
@@ -663,7 +686,11 @@
                     CurrentUser.JobTitle = "AC",
                     CurrentUser.JobTitle = "LAC",
                     CurrentUser.JobTitle = "SAC",
-                    CurrentUser.JobTitle = "SAC(T)"
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
@@ -675,18 +702,24 @@
         ZIndex: =89
 
     "'LM Surname' As 'Text input'":
+        AccessibleLabel: ="Surname"
         DisplayMode: |-
             =If(
                 Or(
                     CurrentUser.JobTitle = "AC",
                     CurrentUser.JobTitle = "LAC",
                     CurrentUser.JobTitle = "SAC",
-                    CurrentUser.JobTitle = "SAC(T)"
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
                 ),
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
         Height: =32
+        Required: =true
         Width: =254
         X: =665
         Y: =591
