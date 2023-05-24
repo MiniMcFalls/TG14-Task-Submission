@@ -49,7 +49,7 @@
         "Name": "RectQuickActionBar1_29",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 825,
+        "PublishOrderIndex": 901,
         "Rules": [
           {
             "Category": "Design",
@@ -228,7 +228,7 @@
         "Name": "Triangle1_9",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 826,
+        "PublishOrderIndex": 902,
         "Rules": [
           {
             "Category": "Design",
@@ -412,7 +412,7 @@
         "Name": "Rectangle2_21",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 827,
+        "PublishOrderIndex": 903,
         "Rules": [
           {
             "Category": "Design",
@@ -596,7 +596,7 @@
         "Name": "Rectangle2_22",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 828,
+        "PublishOrderIndex": 904,
         "Rules": [
           {
             "Category": "Design",
@@ -780,7 +780,7 @@
         "Name": "Rectangle2_23",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 829,
+        "PublishOrderIndex": 905,
         "Rules": [
           {
             "Category": "Design",
@@ -996,7 +996,7 @@
         "Name": "LblAppName1_6",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 830,
+        "PublishOrderIndex": 906,
         "Rules": [
           {
             "Category": "Data",
@@ -1326,7 +1326,7 @@
         "Name": "Label9_13",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 831,
+        "PublishOrderIndex": 907,
         "Rules": [
           {
             "Category": "Data",
