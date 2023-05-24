@@ -590,7 +590,7 @@ Home As screen:
         Fill: =varButtonFill
         Height: =32
         HoverFill: =varButtonHover
-        OnSelect: =
+        OnSelect: =Navigate('Manage Task', ScreenTransition.Fade)
         PressedColor: =Color.White
         PressedFill: =varButtonPressedFill
         Size: =12

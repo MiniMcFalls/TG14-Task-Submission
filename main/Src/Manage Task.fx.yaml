@@ -20,8 +20,9 @@
             ZIndex: =2
 
         Label5_1 As label:
-            Text: ="Below you can see your current submissions. User the arrow to open the task details and submit amendments or cancel."
-            Width: =676
+            Height: =42
+            Text: ="Below you can search for current submissions. User the arrow to open the task details and submit amendments. If your task has already been approved or rejected you will not be able to make ammendments."
+            Width: =906
             X: =60
             Y: =123
             ZIndex: =3
@@ -1625,4 +1626,36 @@
         X: =1163
         Y: =214
         ZIndex: =21
+
+    Button7 As button:
+        BorderColor: =varButtonBorderFill
+        BorderThickness: =0
+        Fill: =varButtonFill
+        Height: =32
+        HoverFill: =varButtonHover
+        OnSelect: |
+            =Concurrent(
+                Set(
+                    varSearchTerm,
+                    Blank()
+                ),
+                Set(
+                    varSearchUnit,
+                    Blank()
+                )
+            );
+            Reset(DropdownCanvas1);
+            Reset(TextInputCanvas1);
+            Navigate(
+                Home,
+                ScreenTransition.Fade
+            );
+        PressedColor: =Color.White
+        PressedFill: =varButtonPressedFill
+        Size: =12
+        Text: ="Home"
+        Width: =138
+        X: =1217
+        Y: =11
+        ZIndex: =22
 
