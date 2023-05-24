@@ -581,6 +581,8 @@
         Height: =435
         Item: =CalendarEventsGallery1.Selected
         NumberOfColumns: =4
+        OnFailure: =Notify("Something went wrong, Your Task details have been not been updated", NotificationType.Error)
+        OnSuccess: =Notify("your Task details have been updated", NotificationType.Success); Navigate(Home, ScreenTransition.Fade);
         Visible: =If(IsBlank(varSearchUnit), false,true)
         Width: =1366
         Y: =333
@@ -1599,4 +1601,28 @@
                 Wrap: =false
                 Y: =DataCardKey29.Y
                 ZIndex: =4
+
+    Button6 As button:
+        BorderColor: =varButtonBorderFill
+        DisplayMode: =If(CalendarEventsGallery1.Selected.'Approval Status'.Value = "Approved", DisplayMode.Disabled, CalendarEventsGallery1.Selected.'Approval Status'.Value = "Rejected", DisplayMode.Disabled, DisplayMode.Edit)
+        Fill: =varButtonFill
+        Height: =32
+        HoverFill: =varButtonHover
+        OnSelect: =SubmitForm(Form1);
+        PressedColor: =Color.White
+        PressedFill: =varButtonPressedFill
+        Text: ="Submit"
+        Visible: =If(IsBlank(varSearchUnit), false, true)
+        X: =1195
+        Y: =207
+        ZIndex: =20
+
+    Icon4 As icon.Lock:
+        Height: =20
+        Icon: =Icon.Lock
+        Visible: =If(CalendarEventsGallery1.Selected.'Approval Status'.Value = "Approved", true, CalendarEventsGallery1.Selected.'Approval Status'.Value = "Rejected", true, false)
+        Width: =32
+        X: =1163
+        Y: =214
+        ZIndex: =21
 
