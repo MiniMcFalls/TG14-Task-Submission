@@ -247,7 +247,7 @@
     "'Who is Visiting Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =73
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =392
         Y: =337
@@ -256,7 +256,7 @@
     "'VI Link Box' As 'Text input'":
         DisplayMode: =If('No VI Check Box'.Checked = true, DisplayMode.Disabled,DisplayMode.Edit)
         Height: =35
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =813
         Y: =337
@@ -274,7 +274,7 @@
     "'OOO Serials Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =73
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =392
         Y: =516

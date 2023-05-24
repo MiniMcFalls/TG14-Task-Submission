@@ -179,7 +179,7 @@
     "'Any Further Details Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =815
         Y: =318

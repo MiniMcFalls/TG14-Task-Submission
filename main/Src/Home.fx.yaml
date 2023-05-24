@@ -340,7 +340,7 @@ Home As screen:
             ZIndex: =1
 
     ButtonCanvas1 As Button:
-        Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Secondary
+        Appearance: ='ButtonCanvas.Appearance'.Secondary
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: =Navigate('ID Information', ScreenTransition.Fade)
@@ -351,7 +351,7 @@ Home As screen:
         ZIndex: =30
 
     ButtonCanvas2 As Button:
-        Appearance: ='PowerApps.CoreControls.ButtonCanvas.Appearance'.Primary
+        Appearance: ='ButtonCanvas.Appearance'.Primary
         DisplayMode: =If(Dropdown1.Selected.Value = Blank(),DisplayMode.Disabled, DisplayMode.Edit)
         Height: =34
         OnSelect: |-
@@ -538,6 +538,68 @@ Home As screen:
         X: =101
         Y: =615
         ZIndex: =32
+
+    Rectangle2 As rectangle:
+        DisabledFill: =varPillBackground
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =varPillBackground
+        Height: =251
+        Visible: =!varNewRequest
+        Width: =608
+        X: =717
+        Y: =471
+        ZIndex: =33
+
+    Icon2 As icon.CancelBadge:
+        Color: =varButtonFill
+        Height: =18
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =Set(varNewRequest, false);
+            Reset(Dropdown1);
+            Reset('Agreement Statement Radio');
+            Set(SubmitVis, false);
+        Visible: =varNewRequest
+        Width: =18
+        X: =1299
+        Y: =473
+        ZIndex: =34
+
+    Button1 As button:
+        BorderColor: =varButtonBorderFill
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Fill: =varButtonFill
+        Height: =32
+        HoverFill: =varButtonHover
+        OnSelect: =Set(varNewRequest, true);
+        PressedColor: =Color.White
+        PressedFill: =varButtonPressedFill
+        Size: =12
+        Text: ="Start New Request"
+        Visible: =!varNewRequest
+        Width: =353
+        X: =850
+        Y: =483
+        ZIndex: =35
+
+    Button1_1 As button:
+        BorderColor: =varButtonBorderFill
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Fill: =varButtonFill
+        Height: =32
+        HoverFill: =varButtonHover
+        OnSelect: =
+        PressedColor: =Color.White
+        PressedFill: =varButtonPressedFill
+        Size: =12
+        Text: ="Manage Existing Request"
+        Visible: =!varNewRequest
+        Width: =353
+        X: =850
+        Y: =557
+        ZIndex: =36
 
     Group1_1 As group:
         Height: =5

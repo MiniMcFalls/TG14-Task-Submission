@@ -325,7 +325,7 @@
     "'Publishing Channels Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =394
         Y: =296
@@ -334,7 +334,7 @@
     "'Basic Metadata & Keywords Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =815
         Y: =299
@@ -343,7 +343,7 @@
     "'Editing Requests Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =394
         Y: =477
@@ -352,7 +352,7 @@
     "'Delivery Method Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =377
         X: =815
         Y: =477
@@ -361,7 +361,7 @@
     "'T&S UIN Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Width: =154
         X: =819
         Y: =652

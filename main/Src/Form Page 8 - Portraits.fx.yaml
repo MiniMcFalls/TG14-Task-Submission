@@ -379,7 +379,7 @@
         Y: =532
         ZIndex: =63
 
-    "'Non_Standard ID Select' As 'Radio group'.pcfdataset":
+    "'Non_Standard ID Select' As Radio.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =66
         Items: =["Standard", "Non-Standard"]

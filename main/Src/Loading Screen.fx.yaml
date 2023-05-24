@@ -103,10 +103,10 @@
         ZIndex: =11
 
     Spinner1 As Spinner:
-        Appearance: ='PowerApps.CoreControls.Spinner.Appearance'.Primary
+        Appearance: ='Spinner.Appearance'.Primary
         DisplayMode: =DisplayMode.Edit
         Height: =106
-        SpinnerSize: ='PowerApps.CoreControls.Spinner.SpinnerSize'.Huge
+        SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =200
         X: =928
         Y: =467

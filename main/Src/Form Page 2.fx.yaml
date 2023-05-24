@@ -821,7 +821,7 @@
     "'Working Hazards Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =44
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Value: =Blank()
         Width: =723
         X: =431
@@ -831,7 +831,7 @@
     "'Task Requirements Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =128
-        Mode: ='PowerApps.CoreControls.TextInputCanvas.Mode'.Multiline
+        Mode: ='TextInputCanvas.Mode'.Multiline
         Required: =true
         Value: =Blank()
         Width: =723
