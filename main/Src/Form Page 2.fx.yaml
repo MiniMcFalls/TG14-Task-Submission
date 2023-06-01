@@ -1,19 +1,9 @@
 "'Form Page 2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =varBackgroundFill
     OnVisible: |
-        =Concurrent(
-            Set(
-                varACTailNumCheck,
-                true
-            ),
-            Set(
-                varSerialNumCheck,
-                true
-            ),
-            Set(
-                varTaskDetContIcon,
-                Icon.Information
-            )
+        =Set(
+            varTaskDetContIcon,
+            Icon.Information
         );
 
     "'Justification Text_2' As htmlViewer":
