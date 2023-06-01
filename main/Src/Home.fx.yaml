@@ -494,10 +494,6 @@ Home As screen:
                     'Non-Standard ID Details': ""
                 }
             );
-            Set(
-                varHomeCheckVis,
-                true
-            );
             If(
                 Or(
                     CurrentUser.JobTitle = "AC",

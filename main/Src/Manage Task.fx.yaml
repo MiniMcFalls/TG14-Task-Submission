@@ -124,7 +124,7 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Height: =27
-            OnSelect: =Set(_selectedCalendarEvent, ThisItem)
+            OnSelect: =
             Size: =19 * CalendarEventsGallery1.TemplateHeight / 105
             TabIndex: =0
             Text: |-
@@ -722,6 +722,72 @@
                 Y: =DataCardKey26.Y
                 ZIndex: =4
 
+        "'Project Category_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TaskType"
+            Default: =ThisItem.'Project Category'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskType")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue33.Selected
+            Width: =341
+            X: =2
+            Y: =0
+            ZIndex: =20
+
+            DataCardKey33 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue33 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'TG14 Task Information'].'Project Category')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('TG14 Task Information'.'Project Category',DataCardValue33.SearchText)
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
+                ZIndex: =2
+
+            ErrorMessage33 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue33.Y + DataCardValue33.Height
+                ZIndex: =3
+
+            StarVisible33 As label:
+                Align: =Align.Center
+                Height: =DataCardKey33.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey33.Y
+                ZIndex: =4
+
         "'Task Location_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="TaskLocation"
@@ -788,72 +854,6 @@
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey27.Y
-                ZIndex: =4
-
-        "'Project Category_DataCard1' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="TaskType"
-            Default: =ThisItem.'Project Category'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'TG14 Task Information'],DataSourceInfo.DisplayName,"TaskType")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue33.Selected
-            Width: =341
-            X: =2
-            Y: =0
-            ZIndex: =20
-
-            DataCardKey33 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue33 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@'TG14 Task Information'].TaskType)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =Choices('TG14 Task Information'.TaskType,DataCardValue33.SearchText)
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
-                ZIndex: =2
-
-            ErrorMessage33 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue33.Y + DataCardValue33.Height
-                ZIndex: =3
-
-            StarVisible33 As label:
-                Align: =Align.Center
-                Height: =DataCardKey33.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey33.Y
                 ZIndex: =4
 
         Rank_DataCard1 As typedDataCard.textualEditCard:
@@ -1226,10 +1226,10 @@
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["DisplayName","Email","Picture"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@'TG14 Task Information'].O365_x0020_Data)
+                Items: =Choices([@'TG14 Task Information'].'O365 Data')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["DisplayName"]
-                SearchItems: =Choices('TG14 Task Information'.O365_x0020_Data,DataCardValue40.SearchText)
+                SearchItems: =Choices('TG14 Task Information'.'O365 Data',DataCardValue40.SearchText)
                 SelectMultiple: =false
                 Template: =ListItemTemplate.Person
                 Tooltip: =Parent.DisplayName

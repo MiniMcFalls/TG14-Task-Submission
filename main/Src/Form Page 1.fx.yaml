@@ -287,7 +287,7 @@
         Size: =8
         Text: ="*Please select a valid time"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =If(DateTimeValue(Concatenate('Task Date Picker'.Value, ", ", 'Task Time Box'.Value)) < Now() Or IsBlank(cmp_TimePicker_1.value), true, false)
+        Visible: =If(DateTimeValue(Concatenate('Task Date Picker'.Value, ", ", 'Task Time Box'.Value)) < Now() Or IsBlankOrError(cmp_TimePicker_1.value), true, false)
         Width: =194
         X: =1047
         Y: =311

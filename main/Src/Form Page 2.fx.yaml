@@ -843,7 +843,7 @@
         Checked: =false
         DisplayMode: |-
             =If(
-                varACTailNumCheck = true,
+                'Serial Num Check'.Checked = false,
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
@@ -858,7 +858,7 @@
     "'Serial Num Check' As Checkbox":
         DisplayMode: |-
             =If(
-                varSerialNumCheck = true,
+                'AC Tail Check'.Checked = false,
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )

@@ -1012,6 +1012,13 @@
                         ),
                         'Task requirements'
                     ),
+                    'Tail Number': Concat(
+                        Filter(
+                            UserResponses,
+                            PAResponseID = varResponseID
+                        ),
+                        'AC Tail Number'
+                    ),
                     Deadline: DateValue(
                         Concat(
                             Filter(
