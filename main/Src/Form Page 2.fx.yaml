@@ -1,8 +1,20 @@
 "'Form Page 2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =varBackgroundFill
-    OnVisible: |-
-        =Concurrent(Set(varACTailNumCheck, true), Set(varSerialNumCheck, true), Set(varTaskDetContIcon, Icon.Information));
-        If('Project Category Box'.Selected.Value <> "Engineering", Set(varACTailNumCheck, false) And Set(varSerialNumCheck, false));
+    OnVisible: |
+        =Concurrent(
+            Set(
+                varACTailNumCheck,
+                true
+            ),
+            Set(
+                varSerialNumCheck,
+                true
+            ),
+            Set(
+                varTaskDetContIcon,
+                Icon.Information
+            )
+        );
 
     "'Justification Text_2' As htmlViewer":
         AutoHeight: =true
@@ -849,7 +861,7 @@
             )
         Height: =31
         Label: =""
-        OnChange: =Set(varSerialNumCheck, false)
+        OnChange: =Reset('AC Tail Number Box')
         Width: =37
         X: =819
         Y: =293
@@ -864,7 +876,7 @@
             )
         Height: =32
         Label: =""
-        OnChange: =Set(varACTailNumCheck, false)
+        OnChange: =Reset('Serial Number Box')
         Width: =37
         X: =819
         Y: =342
