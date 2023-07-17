@@ -40,7 +40,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.13"
+    "Version": "0.0.15"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_CheckboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Checkbox",
-    "Version": "0.0.12"
+    "Version": "0.0.13"
   },
   "circle": {
     "CustomGroupControlTemplateName": "",
@@ -169,7 +169,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.12"
+    "Version": "0.0.14"
   },
   "fluidGrid": {
     "CustomGroupControlTemplateName": "",
@@ -251,7 +251,7 @@
     "Name": "groupContainer",
     "Version": "1.0"
   },
-  "hostControl": {
+  "Host": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
     "HostType": "Default",
@@ -406,7 +406,7 @@
     "Name": "PowerApps_CoreControls_Spinner",
     "OverridableProperties": {},
     "TemplateDisplayName": "Spinner",
-    "Version": "1.0.16"
+    "Version": "1.0.17"
   },
   "text": {
     "CustomGroupControlTemplateName": "",

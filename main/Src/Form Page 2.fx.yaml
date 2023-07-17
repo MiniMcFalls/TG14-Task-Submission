@@ -851,7 +851,9 @@
             )
         Height: =31
         Label: =""
-        OnChange: =Reset('AC Tail Number Box')
+        OnCheck: =false
+        OnSelect: =false
+        OnUncheck: =false
         Width: =37
         X: =819
         Y: =293
@@ -866,7 +868,9 @@
             )
         Height: =32
         Label: =""
-        OnChange: =Reset('Serial Number Box')
+        OnCheck: =false
+        OnSelect: =false
+        OnUncheck: =false
         Width: =37
         X: =819
         Y: =342

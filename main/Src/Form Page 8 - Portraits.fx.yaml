@@ -355,7 +355,7 @@
             Height: =362
             Text: ="Lossiemouth SP Only"
             VerticalAlign: =VerticalAlign.Top
-            Visible: =If('Portrait Required Box'.Selected.Value = "Aircraft Tail Portrait" && gblSubmitLocation <> "Lossiemouth", true, false)
+            Visible: =If('Portrait Required Box'.Selected.Value = "Aircraft Tail Portrait" && gblSubmitLocation <> "RAF Lossiemouth", true, false)
             Width: =783
             X: =394
             Y: =330

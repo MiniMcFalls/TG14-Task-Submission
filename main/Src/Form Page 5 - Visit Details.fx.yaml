@@ -266,6 +266,9 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: ="No VI"
+        OnCheck: =false
+        OnSelect: =false
+        OnUncheck: =false
         Width: =160
         X: =813
         Y: =380

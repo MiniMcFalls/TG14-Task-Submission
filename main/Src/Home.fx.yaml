@@ -530,6 +530,9 @@ Home As screen:
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: ="Alternate Contact Required"
+        OnCheck: =false
+        OnSelect: =false
+        OnUncheck: =false
         Width: =227
         X: =101
         Y: =615

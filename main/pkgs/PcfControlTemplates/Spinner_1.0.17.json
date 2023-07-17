@@ -624,7 +624,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.16\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.17\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
@@ -985,5 +985,5 @@
       "Type": 4
     }
   ],
-  "Version": "1.0.16"
+  "Version": "1.0.17"
 }

@@ -1,7 +1,7 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.331",
+    "DocVersion": "1.333",
     "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
   },
@@ -42,12 +42,12 @@
       "enableonstart": true,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,
-      "enablepowerautomatepane": true,
       "enablerowscopeonetonexpand": false,
       "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
       "enableruntimepolicies": true,
       "enablesaveloadcleardataonweb": true,
+      "enableupdateifdelegation": false,
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
@@ -64,6 +64,7 @@
       "improvedmediacapture": false,
       "improvedtabstopbehavior": true,
       "impurenodedelegation": false,
+      "isemptyrequirestableargument": true,
       "keeprecentscreensloaded": true,
       "longlivingcache": false,
       "mobilenativerendering": false,
@@ -115,7 +116,8 @@
     "ManualOfflineProfileId": "",
     "Name": "TG14 Photographic Support Request",
     "OriginatingVersion": "1.321",
-    "ParserErrorCount": 0
+    "ParserErrorCount": 0,
+    "ShowStatusBar": false
   },
   "PublishInfo": {
     "AppName": "TG14 Photographic Support Request",
