@@ -77,13 +77,16 @@
                         First(
                             SortByColumns(
                                 Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Lossiemouth"
+                                    'TG14 Task Information',
+                                    Unit.Value = "Lossiemouth",
+                                    'Approval Status'.Value = "Awaiting Approval" Or
+                                    'Approval Status'.Value = "Approved" Or
+                                    'Approval Status'.Value = "Rejected"
                                 ),
-                                "Job_x0020_Number",
+                                "ID",
                                 SortOrder.Descending
                             )
-                        ).Job + 1,
+                        ).Title + 1,
                         If(
                             "2023" in Concat(
                                 Filter(
