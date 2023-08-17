@@ -40,7 +40,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.16"
+    "Version": "0.0.17"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -126,7 +126,7 @@
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Date picker",
-    "Version": "0.0.2"
+    "Version": "0.0.3"
   },
   "datepicker": {
     "CustomGroupControlTemplateName": "",
@@ -169,7 +169,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.14"
+    "Version": "0.0.15"
   },
   "fluidGrid": {
     "CustomGroupControlTemplateName": "",
@@ -264,7 +264,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "hostControl",
     "OverridableProperties": {},
-    "Version": "1.5.4"
+    "Version": "1.6.0"
   },
   "htmlViewer": {
     "CustomGroupControlTemplateName": "",
@@ -363,7 +363,7 @@
     "Name": "PowerApps_CoreControls_RadioGroupCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Radio",
-    "Version": "0.0.7"
+    "Version": "0.0.8"
   },
   "rectangle": {
     "CustomGroupControlTemplateName": "",
@@ -435,7 +435,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.13"
+    "Version": "0.0.14"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

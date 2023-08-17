@@ -147,7 +147,10 @@
     "'Task Time Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
         Required: =true
+        Type: ="Text"
         Value: |-
             =If(IsBlank(cmp_TimePicker_1.value), "00:00",Text(cmp_TimePicker_1.value,DateTimeFormat.ShortTime24,"en-GB"))
         Width: =150
@@ -388,7 +391,10 @@
     "'Task Location Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
         Required: =true
+        Type: ="Text"
         Value: =Blank()
         Width: =377
         X: =295

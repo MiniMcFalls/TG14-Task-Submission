@@ -823,7 +823,10 @@
     "'Working Hazards Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =44
+        MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
+        Placeholder: =""
+        Type: ="Text"
         Value: =Blank()
         Width: =723
         X: =431
@@ -833,8 +836,11 @@
     "'Task Requirements Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =128
+        MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
+        Placeholder: =""
         Required: =true
+        Type: ="Text"
         Value: =Blank()
         Width: =723
         X: =431
@@ -879,6 +885,9 @@
     "'AC Tail Number Box' As 'Text input'":
         DisplayMode: =If('AC Tail Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Value: =Blank()
         Width: =232
         X: =856
@@ -888,6 +897,9 @@
     "'Serial Number Box' As 'Text input'":
         DisplayMode: =If('Serial Num Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Value: =Blank()
         Width: =232
         X: =856

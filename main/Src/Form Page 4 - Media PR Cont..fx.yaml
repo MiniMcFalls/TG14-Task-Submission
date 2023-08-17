@@ -179,7 +179,10 @@
     "'Any Further Details Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =69
+        MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
+        Placeholder: =""
+        Type: ="Text"
         Width: =377
         X: =815
         Y: =318

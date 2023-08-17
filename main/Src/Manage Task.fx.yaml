@@ -38,7 +38,7 @@
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: =If(IsBlank(varSearchTerm), Blank(), SortByColumns(Filter('TG14 Task Information', Title = varSearchTerm,Unit.Value = "waddington"), "Title", SortOrder.Descending))
+        Items: =If(IsBlank(varSearchTerm), Blank(), SortByColumns(Filter('TG14 Task Information', Title = varSearchTerm,Unit.Value = DropdownCanvas1.Selected.Value), "Title", SortOrder.Descending))
         Layout: =Layout.Vertical
         LoadingSpinnerColor: =RGBA(0,0,0,1)
         OnSelect: =
@@ -448,8 +448,11 @@
     "TextInputCanvas1 As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        MaxLength: =-1
         OnChange: =Set(varSearchTerm, Blank()); Set(varSearchUnit, Blank());
+        Placeholder: =""
         Required: =false
+        Type: ="Text"
         Width: =79
         X: =129
         Y: =207

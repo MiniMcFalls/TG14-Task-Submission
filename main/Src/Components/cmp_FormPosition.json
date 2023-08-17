@@ -117,7 +117,7 @@
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 24px; width: 192px; height: 270px; border-radius: 10px'></div>\"\r\n",
+            "InvariantScript": "\"<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 24px; width: 192px; height: 270px; border-radius: 10px'></div>\"\n",
             "Property": "HtmlText",
             "RuleProviderType": "Unknown"
           },
@@ -9827,7 +9827,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638254343418259532",
+    "LastModifiedTimestamp": "638278597516757084",
     "Name": "cmp_FormPosition",
     "Rules": [
       {
@@ -9886,7 +9886,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638254343418259532",
+  "LastModifiedTimestamp": "638278597516757084",
   "Name": "74a635b49944403e931ad5b58b608945",
   "OverridableProperties": {},
   "Version": "638041202274607815"

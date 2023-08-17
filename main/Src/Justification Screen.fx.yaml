@@ -529,6 +529,9 @@
     "'Alt Forename' As 'Text input'":
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Width: =245
         X: =800
         Y: =361
@@ -537,6 +540,9 @@
     "'Alt Surname' As 'Text input'":
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Width: =254
         X: =1056
         Y: =361
@@ -545,6 +551,9 @@
     "'Alt O365 Phone' As 'Text input'":
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Value: =Concat('Alt O365'.Selected.BusinessPhones, Value)
         Width: =320
         X: =800
@@ -696,6 +705,9 @@
                 DisplayMode.Disabled
             )
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Width: =245
         X: =410
         Y: =591
@@ -719,7 +731,10 @@
                 DisplayMode.Disabled
             )
         Height: =32
+        MaxLength: =-1
+        Placeholder: =""
         Required: =true
+        Type: ="Text"
         Width: =254
         X: =665
         Y: =591

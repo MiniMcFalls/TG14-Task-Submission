@@ -46,15 +46,6 @@
     "datasets": {
       "https://modgovuk.sharepoint.com/teams/13793": {
         "dataSources": {
-          "1177 Task Register 2022": {
-            "tableName": "589d524c-0042-4580-9712-c40ff859c5fa"
-          },
-          "1177 Task Register 2023": {
-            "tableName": "d5ebdbdd-d57c-415c-ab9a-120d3730c735"
-          },
-          "1177 Task Register 2024": {
-            "tableName": "091eb9c3-1134-4266-9ca1-c12bfcc1da0a"
-          },
           "TG14 App Versions": {
             "tableName": "d402ea8d-bef6-48c9-880d-b520bf40ae71"
           },
@@ -65,9 +56,6 @@
       }
     },
     "dataSources": [
-      "1177 Task Register 2022",
-      "1177 Task Register 2023",
-      "1177 Task Register 2024",
       "TG14 App Versions",
       "TG14 Task Information"
     ],

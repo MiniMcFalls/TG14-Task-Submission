@@ -54,7 +54,7 @@
     "'Proceed button_9' As button":
         DisplayMode: =
         Fill: =RGBA(54, 176, 75, 1)
-        FontWeight: =FontWeight.Normal
+        FontWeight: =FontWeight.Lighter
         Height: =34
         HoverColor: =Color.White
         HoverFill: =ColorFade(Self.Fill, -20%)
@@ -66,773 +66,97 @@
                 "RAF Lossiemouth",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Lossiemouth",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    'TG14 Task Information',
-                                    Unit.Value = "Lossiemouth",
-                                    'Approval Status'.Value = "Awaiting Approval" Or
-                                    'Approval Status'.Value = "Approved" Or
-                                    'Approval Status'.Value = "Rejected"
-                                ),
-                                "ID",
-                                SortOrder.Descending
-                            )
-                        ).Title + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Lossiemouth"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Lossiemouth"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Waddington
                 "RAF Waddington",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Waddington",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Waddington"
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Waddington"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Waddington"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Coningsby
                 "RAF Coningsby",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Coningsby",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Coningsby"
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Coningsby"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Coningsby"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Leeming
                 "RAF Leeming",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Leeming",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Leeming"
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Leeming"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Leeming"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Brize Norton
                 "RAF Brize Norton",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Brize Photo",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Brize Photo"
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Brize Photo"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Brize Photo"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
+                    ).Title + 1
                 ),
             //------------------------------------------------------------------------------RAF Benson
                 "RAF Benson",
                 Set(
                     varJobNumber,
-                    If(
-                        "2022" in Concat(
+                    First(
+                        SortByColumns(
                             Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
+                                'TG14 Task Information',
+                                Unit.Value = "Benson",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected"
                             ),
-                            'Task Date'
-                        ),
-                        First(
-                            SortByColumns(
-                                Filter(
-                                    '1177 Task Register 2022',
-                                    Unit.Value = "Benson"
-                                ),
-                                "Job_x0020_Number",
-                                SortOrder.Descending
-                            )
-                        ).Job + 1,
-                        If(
-                            "2023" in Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            First(
-                                SortByColumns(
-                                    Filter(
-                                        '1177 Task Register 2023',
-                                        Unit.Value = "Benson"
-                                    ),
-                                    "Job_x0020_Number",
-                                    SortOrder.Descending
-                                )
-                            ).Job + 1,
-                            If(
-                                "2024" in Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                First(
-                                    SortByColumns(
-                                        Filter(
-                                            '1177 Task Register 2024',
-                                            Unit.Value = "Benson"
-                                        ),
-                                        "Job_x0020_Number",
-                                        SortOrder.Descending
-                                    )
-                                ).Job + 1
-                            )
+                            "ID",
+                            SortOrder.Descending
                         )
-                    )
-                )
-            );
-            //------------------------------------------------------------------------------Switch for Patch of 1177 Doc
-            If(
-                "2022" in Concat(
-                    Filter(
-                        UserResponses,
-                        PAResponseID = varResponseID
-                    ),
-                    'Task Date'
-                ),
-                Patch(
-                    '1177 Task Register 2022',
-                    {
-                        Job: varJobNumber,
-                        'Month Task Generated': Text(
-                            DateValue(
-                                Today(),
-                                "en-GB"
-                            ),
-                            "mmmm"
-                        ),
-                        'Stills, Video or Both': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Service Required'
-                        ),
-                        Status: "PLANNED",
-                        'Task Date': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Task Date'
-                        ),
-                        'Task Time': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Start Time'
-                        ),
-                        'Task Type': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Project Category'
-                        ),
-                        'Task Location': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Task Location'
-                        ),
-                        'Aircraft Tail No. Course No. or Other local Reference': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'AC Tail Number'
-                        ),
-                        'Task Description': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Task requirements'
-                        ),
-                        Rank: Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Cust Rank'
-                        ),
-                        Name: Concatenate(
-                            Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Cust Forename'
-                            ) & " " & Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Cust Surname'
-                            )
-                        ),
-                        'Place of Work': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Cust Location'
-                        ),
-                        Extension: Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Contact Number'
-                        ),
-                        'Response ID': Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            Text(PAResponseID)
-                        ),
-                        Unit: {
-                            Value: Switch(
-                                gblSubmitLocation,
-                                "RAF Lossiemouth",
-                                "Lossiemouth",
-                                "RAF Coningsby",
-                                "Coningsby",
-                                "RAF Waddington",
-                                "Waddington",
-                                "RAF Leeming",
-                                "Leeming",
-                                "RAF Brize Norton",
-                                "Brize Photo",
-                                "RAF Benson",
-                                "Benson"
-                            )
-                        }
-                    }
-                ),
-                If(
-                    "2023" in Concat(
-                        Filter(
-                            UserResponses,
-                            PAResponseID = varResponseID
-                        ),
-                        'Task Date'
-                    ),
-                    Patch(
-                        '1177 Task Register 2023',
-                        {
-                            Job: varJobNumber,
-                            'Month Task Generated': Text(
-                                DateValue(
-                                    Today(),
-                                    "en-GB"
-                                ),
-                                "mmmm"
-                            ),
-                            'Stills, Video or Both': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Service Required'
-                            ),
-                            Status: "PLANNED",
-                            'Task Date': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Date'
-                            ),
-                            'Task Time': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Start Time'
-                            ),
-                            'Task Type': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Project Category'
-                            ),
-                            'Task Location': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task Location'
-                            ),
-                            'Aircraft Tail No. Course No. or Other local Reference': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'AC Tail Number'
-                            ),
-                            'Task Description': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Task requirements'
-                            ),
-                            Rank: Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Cust Rank'
-                            ),
-                            Name: Concatenate(
-                                Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Cust Forename'
-                                ) & " " & Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Cust Surname'
-                                )
-                            ),
-                            'Place of Work': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Cust Location'
-                            ),
-                            Extension: Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                'Contact Number'
-                            ),
-                            'Response ID': Concat(
-                                Filter(
-                                    UserResponses,
-                                    PAResponseID = varResponseID
-                                ),
-                                Text(PAResponseID)
-                            ),
-                            Unit: {
-                                Value: Switch(
-                                    gblSubmitLocation,
-                                    "RAF Lossiemouth",
-                                    "Lossiemouth",
-                                    "RAF Coningsby",
-                                    "Coningsby",
-                                    "RAF Waddington",
-                                    "Waddington",
-                                    "RAF Leeming",
-                                    "Leeming",
-                                    "RAF Brize Norton",
-                                    "Brize Photo",
-                                    "RAF Benson",
-                                    "Benson"
-                                )
-                            }
-                        }
-                    ),
-                    If(
-                        "2024" in Concat(
-                            Filter(
-                                UserResponses,
-                                PAResponseID = varResponseID
-                            ),
-                            'Task Date'
-                        ),
-                        Patch(
-                            '1177 Task Register 2024',
-                            {
-                                Job: varJobNumber,
-                                'Month Task Generated': Text(
-                                    DateValue(
-                                        Today(),
-                                        "en-GB"
-                                    ),
-                                    "mmmm"
-                                ),
-                                'Stills, Video or Both': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Service Required'
-                                ),
-                                Status: "PLANNED",
-                                'Task Date': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Date'
-                                ),
-                                'Task Time': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Start Time'
-                                ),
-                                'Task Type': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Project Category'
-                                ),
-                                'Task Location': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task Location'
-                                ),
-                                'Aircraft Tail No. Course No. or Other local Reference': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'AC Tail Number'
-                                ),
-                                'Task Description': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Task requirements'
-                                ),
-                                Rank: Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Cust Rank'
-                                ),
-                                Name: Concatenate(
-                                    Concat(
-                                        Filter(
-                                            UserResponses,
-                                            PAResponseID = varResponseID
-                                        ),
-                                        'Cust Forename'
-                                    ) & " " & Concat(
-                                        Filter(
-                                            UserResponses,
-                                            PAResponseID = varResponseID
-                                        ),
-                                        'Cust Surname'
-                                    )
-                                ),
-                                'Place of Work': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Cust Location'
-                                ),
-                                Extension: Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    'Contact Number'
-                                ),
-                                'Response ID': Concat(
-                                    Filter(
-                                        UserResponses,
-                                        PAResponseID = varResponseID
-                                    ),
-                                    Text(PAResponseID)
-                                ),
-                                Unit: {
-                                    Value: Switch(
-                                        gblSubmitLocation,
-                                        "RAF Lossiemouth",
-                                        "Lossiemouth",
-                                        "RAF Coningsby",
-                                        "Coningsby",
-                                        "RAF Waddington",
-                                        "Waddington",
-                                        "RAF Leeming",
-                                        "Leeming",
-                                        "RAF Brize Norton",
-                                        "Brize Photo",
-                                        "RAF Benson",
-                                        "Benson"
-                                    )
-                                }
-                            }
-                        )
-                    )
+                    ).Title + 1
                 )
             );
             //------------------------------------------------------------------------------Switch for Patch of Task Approvals Doc

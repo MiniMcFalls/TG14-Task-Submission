@@ -396,7 +396,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(\r\n    varTimeValue,\r\n    Time(\r\n        Value(gal_TimePicker_Hours.Selected.Value),\r\n        Value(gal_TimePicker_Minutes.Selected.Value),\r\n        0\r\n    )\r\n)",
+                "InvariantScript": "Set(\n    varTimeValue,\n    Time(\n        Value(gal_TimePicker_Hours.Selected.Value),\n        Value(gal_TimePicker_Minutes.Selected.Value),\n        0\n    )\n)",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -925,7 +925,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "If(\r\n    cmp_TimePicker.Default=Blank()\r\n    And varTimeValue=Blank(),\r\n\r\n    // value when no default is supplied\r\n    {Value: \"08\"},\r\n\r\n    // value when default is supplied or hours were clicked\r\n    With(\r\n        {\r\n            wTime: Coalesce(\r\n                varTimeValue,\r\n                cmp_TimePicker.Default\r\n            )\r\n        },\r\n        LookUp(\r\n            Self.AllItems.Value,\r\n            Value = Text(\r\n                Hour(wTime),\r\n                \"[$-en-GB]00\"\r\n            )\r\n        )\r\n    )\r\n)",
+            "InvariantScript": "If(\n    cmp_TimePicker.Default=Blank()\n    And varTimeValue=Blank(),\n\n    // value when no default is supplied\n    {Value: \"08\"},\n\n    // value when default is supplied or hours were clicked\n    With(\n        {\n            wTime: Coalesce(\n                varTimeValue,\n                cmp_TimePicker.Default\n            )\n        },\n        LookUp(\n            Self.AllItems.Value,\n            Value = Text(\n                Hour(wTime),\n                \"[$-en-GB]00\"\n            )\n        )\n    )\n)",
             "Property": "Default",
             "RuleProviderType": "Unknown"
           },
@@ -1124,7 +1124,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Set(\r\n    varTimeValue,\r\n    Time(\r\n        Value(gal_TimePicker_Hours.Selected.Value),\r\n        Value(gal_TimePicker_Minutes.Selected.Value),\r\n        0\r\n    )\r\n)",
+                "InvariantScript": "Set(\n    varTimeValue,\n    Time(\n        Value(gal_TimePicker_Hours.Selected.Value),\n        Value(gal_TimePicker_Minutes.Selected.Value),\n        0\n    )\n)",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1653,7 +1653,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "With(\r\n    {\r\n        wTime: Coalesce(\r\n            varTimeValue,\r\n            cmp_TimePicker.Default\r\n        )\r\n    },\r\n    LookUp(\r\n        Self.AllItems.Value,\r\n        Value = Text(\r\n            Minute(wTime),\r\n            \"[$-en-US]00\"\r\n        )\r\n    )\r\n)",
+            "InvariantScript": "With(\n    {\n        wTime: Coalesce(\n            varTimeValue,\n            cmp_TimePicker.Default\n        )\n    },\n    LookUp(\n        Self.AllItems.Value,\n        Value = Text(\n            Minute(wTime),\n            \"[$-en-US]00\"\n        )\n    )\n)",
             "Property": "Default",
             "RuleProviderType": "Unknown"
           },
@@ -1882,7 +1882,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638254343418261742",
+    "LastModifiedTimestamp": "638278597516759544",
     "Name": "cmp_TimePicker",
     "Rules": [
       {
@@ -1947,7 +1947,7 @@
       },
       {
         "Category": "Behavior",
-        "InvariantScript": "Reset(gal_TimePicker_Hours);\r\nReset(gal_TimePicker_Hours);\r\nSet(varTimeValue, Blank())",
+        "InvariantScript": "Reset(gal_TimePicker_Hours);\nReset(gal_TimePicker_Hours);\nSet(varTimeValue, Blank())",
         "Property": "OnReset",
         "RuleProviderType": "System"
       }
@@ -2008,7 +2008,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638254343418261742",
+  "LastModifiedTimestamp": "638278597516759544",
   "Name": "193cfc78f15849c4adfc534daaff75a8",
   "OverridableProperties": {},
   "Version": "637860480670223294"

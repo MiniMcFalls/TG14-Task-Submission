@@ -364,6 +364,9 @@
     "'Post Nominals Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =41
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Visible: =If('Portrait Required Box'.Selected.Value = "No1's Portrait e.g. Execs Board", true, false)
         Width: =362
         X: =394
@@ -373,6 +376,9 @@
     "'Photo Dist Box' As 'Text input'":
         DisplayMode: =DisplayMode.Edit
         Height: =41
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ="Text"
         Visible: =If('Portrait Required Box'.Selected.Value = "No1's Portrait e.g. Execs Board", true, false)
         Width: =362
         X: =394
@@ -383,6 +389,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =66
         Items: =["Standard", "Non-Standard"]
+        Layout: ="Vertical"
         Visible: =If('Portrait Required Box'.Selected.Value = "Squadron Board", true, false)
         Width: =143
         X: =400
