@@ -7,7 +7,7 @@
   },
   "Properties": {
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "This Application is the primary method for tasking a TG14 Photographic Section for any routine support.",
+    "AppDescription": "This Application is the primary method of requesting support through RAF Visual Communications.",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
@@ -112,13 +112,13 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "TG14 Photographic Support Request",
+    "Name": "RAF Visual Communications Support Application",
     "OriginatingVersion": "1.321",
     "ParserErrorCount": 0,
-    "ShowStatusBar": false
+    "ShowStatusBar": true
   },
   "PublishInfo": {
-    "AppName": "TG14 Photographic Support Request",
+    "AppName": "RAF Visual Communications Support Application",
     "BackgroundColor": "rgba(230, 230, 230, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",
