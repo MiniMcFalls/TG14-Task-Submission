@@ -70,8 +70,8 @@
                         SortByColumns(
                             Filter(
                                 'TG14 Task Information',
-                                Unit.Value = "Lossiemouth",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                Unit.Value = "Waddington",
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending
@@ -87,7 +87,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Waddington",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending
@@ -103,7 +103,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Coningsby",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending
@@ -119,7 +119,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Leeming",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending
@@ -135,7 +135,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Brize Photo",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending
@@ -151,7 +151,7 @@
                             Filter(
                                 'TG14 Task Information',
                                 Unit.Value = "Benson",
-                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false
+                                'Approval Status'.Value = "Awaiting Approval" Or 'Approval Status'.Value = "Approved" Or 'Approval Status'.Value = "Rejected", 'Diversion?' = false,!IsBlank(Title)
                             ),
                             "ID",
                             SortOrder.Descending

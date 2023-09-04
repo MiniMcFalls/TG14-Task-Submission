@@ -103,7 +103,7 @@
         "Name": "lbl_TickerPicker_Border",
         "Parent": "cmp_TimePicker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 897,
+        "PublishOrderIndex": 898,
         "Rules": [
           {
             "Category": "Data",
@@ -386,7 +386,7 @@
             "Name": "galleryTemplate1",
             "Parent": "gal_TimePicker_Hours",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 899,
+            "PublishOrderIndex": 900,
             "Rules": [
               {
                 "Category": "Design",
@@ -559,7 +559,7 @@
             "Name": "Label7",
             "Parent": "gal_TimePicker_Hours",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 900,
+            "PublishOrderIndex": 901,
             "Rules": [
               {
                 "Category": "Data",
@@ -909,7 +909,7 @@
         "Name": "gal_TimePicker_Hours",
         "Parent": "cmp_TimePicker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 898,
+        "PublishOrderIndex": 899,
         "Rules": [
           {
             "Category": "Data",
@@ -1114,7 +1114,7 @@
             "Name": "galleryTemplate1_1",
             "Parent": "gal_TimePicker_Minutes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 902,
+            "PublishOrderIndex": 903,
             "Rules": [
               {
                 "Category": "Design",
@@ -1287,7 +1287,7 @@
             "Name": "Label7_1",
             "Parent": "gal_TimePicker_Minutes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 903,
+            "PublishOrderIndex": 904,
             "Rules": [
               {
                 "Category": "Data",
@@ -1637,7 +1637,7 @@
         "Name": "gal_TimePicker_Minutes",
         "Parent": "cmp_TimePicker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 901,
+        "PublishOrderIndex": 902,
         "Rules": [
           {
             "Category": "Data",
@@ -1882,7 +1882,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638290746131815039",
+    "LastModifiedTimestamp": "638294255331416544",
     "Name": "cmp_TimePicker",
     "Rules": [
       {
@@ -2008,7 +2008,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638290746131815039",
+  "LastModifiedTimestamp": "638294255331416544",
   "Name": "193cfc78f15849c4adfc534daaff75a8",
   "OverridableProperties": {},
   "Version": "637860480670223294"
