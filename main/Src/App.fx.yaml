@@ -38,26 +38,6 @@ App As appinfo:
             gblCurrentUser,
             Office365Users.UserProfileV2(User().Email)
         );
-        // Version Patch (for OnStart)
-        Patch(
-            'TG14 App Versions',
-            First(
-                Filter(
-                    'TG14 App Versions',
-                    Title = "TG14 Photographic Support Request"
-                )
-            ),
-            {'Vers Num': CurrentVer}
-        );
-        Set(
-            LatestVer,
-            First(
-                Filter(
-                    'TG14 App Versions',
-                    Title = "TG14 Photographic Support Request"
-                )
-            )
-        );
         
         
         // Set Colour Variables

@@ -145,12 +145,14 @@
         ZIndex: =15
 
     "'Task Time Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Required: =true
         Type: ="Text"
+        ValidationState: ="None"
         Value: |-
             =If(IsBlank(cmp_TimePicker_1.value), "00:00",Text(cmp_TimePicker_1.value,DateTimeFormat.ShortTime24,"en-GB"))
         Width: =150
@@ -237,11 +239,11 @@
                 DisplayMode.Disabled,
                 IsBlank('Project Category Box'.Selected),
                 DisplayMode.Disabled,
-                'Task Date Picker'.Value < Today(),
+                'Task Date Picker'.SelectedDate < Today(),
                 DisplayMode.Disabled,
-                'Deadline Picker'.Value < Today(),
+                'Deadline Picker'.SelectedDate < Today(),
                 DisplayMode.Disabled,
-                DateTimeValue(Concatenate('Task Date Picker'.Value, ", ",'Task Time Box'.Value)) < Now(),
+                DateTimeValue(Concatenate('Task Date Picker'.SelectedDate, ", ",'Task Time Box'.Value)) < Now(),
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
@@ -250,7 +252,7 @@
         HoverColor: =Color.White
         HoverFill: =ColorFade(Self.Fill, -20%)
         OnSelect: |
-            =Set(varDateSelected, 'Task Date Picker'.Value)
+            =Set(varDateSelected, 'Task Date Picker'.SelectedDate)
             ;
             Patch(
                 UserResponses,
@@ -261,12 +263,12 @@
                     )
                 ),
                 {
-                    'Task Date': 'Task Date Picker'.Value,
+                    'Task Date': 'Task Date Picker'.SelectedDate,
                     'Start Time': 'Task Time Box'.Value,
                     'Task Location': 'Task Location Box'.Value,
                     'Service Required': 'Service Required Box'.Selected.Value,
                     'Project Category': 'Project Category Box'.Selected.Value,
-                    'Product Deadline': 'Deadline Picker'.Value
+                    'Product Deadline': 'Deadline Picker'.SelectedDate
                 }
             );
             Navigate(
@@ -290,7 +292,7 @@
         Size: =8
         Text: ="*Please select a valid time"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =If(DateTimeValue(Concatenate('Task Date Picker'.Value, ", ", 'Task Time Box'.Value)) < Now() Or IsBlankOrError(cmp_TimePicker_1.value), true, false)
+        Visible: =If(DateTimeValue(Concatenate('Task Date Picker'.SelectedDate, ", ", 'Task Time Box'.Value)) < Now() Or IsBlankOrError(cmp_TimePicker_1.value), true, false)
         Width: =194
         X: =1047
         Y: =311
@@ -368,33 +370,38 @@
         ZIndex: =32
 
     "'Task Date Picker' As 'Date picker'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnChange: =Reset(cmp_TimePicker_1)
         Required: =true
-        Value: =If(IsBlank(varDateSelected), Today(), varDateSelected)
+        SelectedDate: =Today()
+        ValidationState: ="None"
         Width: =190
         X: =295
         Y: =305
         ZIndex: =33
 
     "'Deadline Picker' As 'Date picker'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Required: =true
-        Value: ='Task Date Picker'.Value + 1
+        ValidationState: ="None"
         Width: =213
         X: =900
         Y: =580
         ZIndex: =34
 
     "'Task Location Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Required: =true
         Type: ="Text"
+        ValidationState: ="None"
         Value: =Blank()
         Width: =377
         X: =295
@@ -402,7 +409,9 @@
         ZIndex: =35
 
     "'Project Category Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: |-
             =[
@@ -416,6 +425,7 @@
                 "Portrait"
             ]
         Required: =true
+        ValidationState: ="None"
         Width: =361
         X: =295
         Y: =577
@@ -430,9 +440,12 @@
             ZIndex: =1
 
     "'Service Required Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =[Blank(),"Stills","Video","Both"]
+        ValidationState: ="None"
         Width: =216
         X: =897
         Y: =428
@@ -468,7 +481,7 @@
                     false
                 );
                 If(
-                    cmp_TimePicker_1.value >= TimeValue("01/01/1970, 13:00:00") && cmp_TimePicker_1.value <= TimeValue("01/01/1970, 23:59:59") && Text('Task Date Picker'.Value, "dddd") = "Wednesday" && gblSubmitLocation = "RAF Lossiemouth",
+                    cmp_TimePicker_1.value >= TimeValue("01/01/1970, 13:00:00") && cmp_TimePicker_1.value <= TimeValue("01/01/1970, 23:59:59") && Text('Task Date Picker'.SelectedDate, "dddd") = "Wednesday" && gblSubmitLocation = "RAF Lossiemouth",
                     Set(
                         varTimeBlocker,
                         true

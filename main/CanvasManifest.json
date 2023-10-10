@@ -1,26 +1,30 @@
 {
   "FormatVersion": "0.24",
   "Header": {
+    "AnalysisOptions": {
+      "DataflowAnalysisEnabled": false,
+      "DataflowAnalysisFlagStateToggledByUser": false
+    },
     "DocVersion": "1.334",
     "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
   },
   "Properties": {
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "This Application is the primary method of requesting support through RAF Visual Communications.",
+    "AppDescription": "This application is the primary method of requesting support through RAF Visual Communications.",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
       "appinsightserrortracing": true,
       "appinstrumentationcorrelationtracing": true,
       "autocreateenvironmentvariables": false,
-      "backfromhostaction": false,
       "behaviorpropertyui": true,
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
       "classiccontrols": false,
       "consistentreturnschemafortabularfunctions": true,
       "copyandmerge": true,
+      "dataflowanalysisenabled": false,
       "datatablev2control": true,
       "dataverseactionsenabled": false,
       "delaycontrolrendering": true,
@@ -47,7 +51,6 @@
       "enableruntimepolicies": true,
       "enablesaveloadcleardataonweb": true,
       "enableupdateifdelegation": false,
-      "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
       "expandedsavedatasupport": true,
@@ -95,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 10,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",

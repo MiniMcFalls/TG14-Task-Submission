@@ -749,8 +749,10 @@
         ZIndex: =27
 
     "'TLB Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DefaultSelectedItems: =Blank()
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: |-
             =[
@@ -761,6 +763,7 @@
                 "PJHQ",
                 "Defence"
             ]
+        ValidationState: ="None"
         Width: =262
         X: =431
         Y: =292
@@ -821,12 +824,14 @@
             ZIndex: =2
 
     "'Working Hazards Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =44
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Value: =Blank()
         Width: =723
         X: =431
@@ -834,6 +839,7 @@
         ZIndex: =32
 
     "'Task Requirements Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =128
         MaxLength: =-1
@@ -841,6 +847,7 @@
         Placeholder: =""
         Required: =true
         Type: ="Text"
+        ValidationState: ="None"
         Value: =Blank()
         Width: =723
         X: =431
@@ -848,6 +855,7 @@
         ZIndex: =33
 
     "'AC Tail Check' As Checkbox":
+        BasePaletteColor: =""
         Checked: =false
         DisplayMode: |-
             =If(
@@ -866,6 +874,7 @@
         ZIndex: =34
 
     "'Serial Num Check' As Checkbox":
+        BasePaletteColor: =""
         DisplayMode: |-
             =If(
                 'AC Tail Check'.Checked = false,
@@ -883,11 +892,13 @@
         ZIndex: =35
 
     "'AC Tail Number Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =If('AC Tail Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Value: =Blank()
         Width: =232
         X: =856
@@ -895,11 +906,13 @@
         ZIndex: =36
 
     "'Serial Number Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =If('Serial Num Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Value: =Blank()
         Width: =232
         X: =856

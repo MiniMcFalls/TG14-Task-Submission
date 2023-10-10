@@ -177,21 +177,26 @@
         ZIndex: =17
 
     "'Any Further Details Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =815
         Y: =318
         ZIndex: =18
 
     "'Product Format Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =30
         Items: =[Blank(),"Stills Package","Video Production","Rushes Package"]
+        ValidationState: ="None"
         Width: =262
         X: =396
         Y: =318

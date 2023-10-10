@@ -245,30 +245,35 @@
         ZIndex: =26
 
     "'Who is Visiting Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =73
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =392
         Y: =337
         ZIndex: =27
 
     "'VI Link Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =If('No VI Check Box'.Checked = true, DisplayMode.Disabled,DisplayMode.Edit)
         Height: =35
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =813
         Y: =337
         ZIndex: =28
 
     "'No VI Check Box' As Checkbox":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: ="No VI"
@@ -281,22 +286,27 @@
         ZIndex: =29
 
     "'OOO Serials Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =73
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =392
         Y: =516
         ZIndex: =30
 
     "'Dress State Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DefaultSelectedItems: =Blank()
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =29
         Items: =[Blank(),"NWD","2A","PCS","No1's", "Civilian Attire"]
+        ValidationState: ="None"
         Width: =218
         X: =817
         Y: =516

@@ -446,6 +446,7 @@
             ZIndex: =23
 
     "TextInputCanvas1 As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -453,12 +454,14 @@
         Placeholder: =""
         Required: =false
         Type: ="Text"
+        ValidationState: ="None"
         Width: =79
         X: =129
         Y: =207
         ZIndex: =7
 
     ButtonCanvas3 As Button:
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: =Set(varSearchTerm, TextInputCanvas1.Value); Set(varSearchUnit, DropdownCanvas1.Selected.Value);
@@ -570,10 +573,13 @@
         ZIndex: =17
 
     DropdownCanvas1 As Dropdown.pcfdataset:
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =["Lossiemouth","Brize Photo","Leeming","Benson","Waddington","Coningsby"]
         OnChange: =Set(varSearchTerm, Blank()); Set(varSearchUnit, Blank());
+        ValidationState: ="None"
         Width: =119
         X: =285
         Y: =207

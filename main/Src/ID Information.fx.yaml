@@ -112,9 +112,12 @@
         ZIndex: =59
 
     "'Portrait Required Box_1' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =29
         Items: =[Blank(),"No1's Portrait e.g. Execs Board", "ISOPrep", "ID Photo", "Squadron Board","Aircraft Tail Portrait"]
+        ValidationState: ="None"
         Width: =352
         X: =284
         Y: =293

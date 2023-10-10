@@ -130,20 +130,25 @@
         ZIndex: =34
 
     "'Group Numbers Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =29
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =393
         Y: =308
         ZIndex: =35
 
     "'Group Dress State Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =29
         Items: =[Blank(),"NWD","2A","PCS","No1's"]
+        ValidationState: ="None"
         Width: =218
         X: =814
         Y: =308
@@ -158,48 +163,56 @@
             ZIndex: =1
 
     "'Group Background Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =393
         Y: =429
         ZIndex: =37
 
     "'Execs Front Row Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =814
         Y: =429
         ZIndex: =38
 
     "'Benches/Chairs Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =395
         Y: =605
         ZIndex: =39
 
     "'Print Size Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =816
         Y: =605

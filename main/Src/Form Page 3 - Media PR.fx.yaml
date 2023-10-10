@@ -323,69 +323,80 @@
         ZIndex: =34
 
     "'Publishing Channels Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =394
         Y: =296
         ZIndex: =35
 
     "'Basic Metadata & Keywords Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =815
         Y: =299
         ZIndex: =36
 
     "'Editing Requests Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =394
         Y: =477
         ZIndex: =37
 
     "'Delivery Method Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =377
         X: =815
         Y: =477
         ZIndex: =38
 
     "'T&S UIN Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Width: =154
         X: =819
         Y: =652
         ZIndex: =39
 
     "'Embargo Picker' As 'Date picker'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Value: =Today()
+        ValidationState: ="None"
         Visible: =varEmbargoPickerVis
         Width: =173
         X: =483

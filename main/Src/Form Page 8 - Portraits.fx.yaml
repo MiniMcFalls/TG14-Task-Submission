@@ -229,11 +229,14 @@
         ZIndex: =59
 
     "'Portrait Required Box' As Dropdown.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Items: =[Blank(),"No1's Portrait e.g. Execs Board", "Squadron Board","Aircraft Tail Portrait"]
         OnChange: =Reset('Non_Standard ID Select')
         Required: =true
+        ValidationState: ="None"
         Width: =352
         X: =394
         Y: =292
@@ -362,11 +365,13 @@
             ZIndex: =60
 
     "'Post Nominals Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =41
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Visible: =If('Portrait Required Box'.Selected.Value = "No1's Portrait e.g. Execs Board", true, false)
         Width: =362
         X: =394
@@ -374,11 +379,13 @@
         ZIndex: =62
 
     "'Photo Dist Box' As 'Text input'":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =41
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
+        ValidationState: ="None"
         Visible: =If('Portrait Required Box'.Selected.Value = "No1's Portrait e.g. Execs Board", true, false)
         Width: =362
         X: =394
@@ -386,6 +393,7 @@
         ZIndex: =63
 
     "'Non_Standard ID Select' As Radio.pcfdataset":
+        BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
         Height: =66
         Items: =["Standard", "Non-Standard"]

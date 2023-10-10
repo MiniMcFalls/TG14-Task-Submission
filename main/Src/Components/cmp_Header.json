@@ -49,7 +49,7 @@
         "Name": "RectQuickActionBar1_29",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 905,
+        "PublishOrderIndex": 904,
         "Rules": [
           {
             "Category": "Design",
@@ -228,7 +228,7 @@
         "Name": "Triangle1_9",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 906,
+        "PublishOrderIndex": 905,
         "Rules": [
           {
             "Category": "Design",
@@ -412,7 +412,7 @@
         "Name": "Rectangle2_21",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 907,
+        "PublishOrderIndex": 906,
         "Rules": [
           {
             "Category": "Design",
@@ -596,7 +596,7 @@
         "Name": "Rectangle2_22",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 908,
+        "PublishOrderIndex": 907,
         "Rules": [
           {
             "Category": "Design",
@@ -780,7 +780,7 @@
         "Name": "Rectangle2_23",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 909,
+        "PublishOrderIndex": 908,
         "Rules": [
           {
             "Category": "Design",
@@ -996,7 +996,7 @@
         "Name": "LblAppName1_6",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 910,
+        "PublishOrderIndex": 909,
         "Rules": [
           {
             "Category": "Data",
@@ -1326,7 +1326,7 @@
         "Name": "Label9_13",
         "Parent": "cmp_Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 911,
+        "PublishOrderIndex": 910,
         "Rules": [
           {
             "Category": "Data",
@@ -1609,7 +1609,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638294255331569615",
+    "LastModifiedTimestamp": "638325193041738547",
     "Name": "cmp_Header",
     "Rules": [
       {
@@ -1668,7 +1668,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638294255331569615",
+  "LastModifiedTimestamp": "638325193041738547",
   "Name": "6d02e1dd2a764a52bf98ad786e4d1adc",
   "OverridableProperties": {},
   "Version": "638041117701966787"
