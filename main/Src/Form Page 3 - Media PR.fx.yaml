@@ -93,7 +93,7 @@
                     'Delivery Method': Concatenate("Delivery Method: ",'Delivery Method Box'.Value),
                     'Product Embargo': If(
                         Text('Product Embargo Toggle'.Value) = "true",
-                        Concatenate("Embargo Date: ", 'Embargo Picker'.Value),
+                        Concatenate("Embargo Date: ", 'Embargo Picker'.SelectedDate),
                         Concatenate("Embargo Date: ", "N/A")
                     ),
                     'T&S UIN': Concatenate("T&S UIN: ",'T&S UIN Box'.Value)
