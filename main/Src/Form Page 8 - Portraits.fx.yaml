@@ -229,7 +229,7 @@
         ZIndex: =59
 
     "'Portrait Required Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
         Height: =32
@@ -365,7 +365,7 @@
             ZIndex: =60
 
     "'Post Nominals Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =41
         MaxLength: =-1
@@ -379,7 +379,7 @@
         ZIndex: =62
 
     "'Photo Dist Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =41
         MaxLength: =-1
@@ -393,7 +393,7 @@
         ZIndex: =63
 
     "'Non_Standard ID Select' As Radio.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =66
         Items: =["Standard", "Non-Standard"]

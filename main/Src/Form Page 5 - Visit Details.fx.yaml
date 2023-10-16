@@ -245,7 +245,7 @@
         ZIndex: =26
 
     "'Who is Visiting Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =73
         MaxLength: =-1
@@ -259,7 +259,7 @@
         ZIndex: =27
 
     "'VI Link Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('No VI Check Box'.Checked = true, DisplayMode.Disabled,DisplayMode.Edit)
         Height: =35
         MaxLength: =-1
@@ -273,7 +273,7 @@
         ZIndex: =28
 
     "'No VI Check Box' As Checkbox":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: ="No VI"
@@ -286,7 +286,7 @@
         ZIndex: =29
 
     "'OOO Serials Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =73
         MaxLength: =-1
@@ -300,7 +300,7 @@
         ZIndex: =30
 
     "'Dress State Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =Blank()
         DisplayMode: =DisplayMode.Edit
         FontSize: =0

@@ -412,7 +412,7 @@
 
     "'Alt Service Dropdown' As Dropdown.pcfdataset":
         AccessibleLabel: =""
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =Blank()
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         FontSize: =0
@@ -433,7 +433,7 @@
             ZIndex: =1
 
     "'Alt Rank' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: |
             =If('Alternate Contact Check_1'.Value = true && !IsBlank('Alt Service Dropdown'.Selected.Value), DisplayMode.Edit, DisplayMode.Disabled)
         FontSize: =0
@@ -533,7 +533,7 @@
             ZIndex: =2
 
     "'Alt Forename' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
@@ -546,7 +546,7 @@
         ZIndex: =84
 
     "'Alt Surname' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
@@ -559,7 +559,7 @@
         ZIndex: =85
 
     "'Alt O365 Phone' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
@@ -573,7 +573,7 @@
         ZIndex: =86
 
     "'LM Service Dropdown' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =Blank()
         DisplayMode: |-
             =If(
@@ -608,7 +608,7 @@
             ZIndex: =4
 
     "'LM Rank Dropdown' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If(IsBlank('LM Service Dropdown'.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
         FontSize: =0
         Height: =32
@@ -707,7 +707,7 @@
             ZIndex: =3
 
     "'LM Forename' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: |-
             =If(
                 Or(
@@ -735,7 +735,7 @@
 
     "'LM Surname' As 'Text input'":
         AccessibleLabel: ="Surname"
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: |-
             =If(
                 Or(

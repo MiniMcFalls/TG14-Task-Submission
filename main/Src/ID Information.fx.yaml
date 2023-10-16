@@ -112,7 +112,7 @@
         ZIndex: =59
 
     "'Portrait Required Box_1' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
         Height: =29

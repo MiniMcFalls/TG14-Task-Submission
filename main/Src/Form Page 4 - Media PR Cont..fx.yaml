@@ -177,7 +177,7 @@
         ZIndex: =17
 
     "'Any Further Details Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =69
         MaxLength: =-1
@@ -191,7 +191,7 @@
         ZIndex: =18
 
     "'Product Format Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
         Height: =30

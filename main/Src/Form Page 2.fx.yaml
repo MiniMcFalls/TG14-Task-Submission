@@ -749,7 +749,7 @@
         ZIndex: =27
 
     "'TLB Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =Blank()
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
@@ -824,7 +824,7 @@
             ZIndex: =2
 
     "'Working Hazards Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =44
         MaxLength: =-1
@@ -839,7 +839,7 @@
         ZIndex: =32
 
     "'Task Requirements Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =128
         MaxLength: =-1
@@ -855,7 +855,7 @@
         ZIndex: =33
 
     "'AC Tail Check' As Checkbox":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         Checked: =false
         DisplayMode: |-
             =If(
@@ -874,7 +874,7 @@
         ZIndex: =34
 
     "'Serial Num Check' As Checkbox":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: |-
             =If(
                 'AC Tail Check'.Checked = false,
@@ -892,7 +892,7 @@
         ZIndex: =35
 
     "'AC Tail Number Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('AC Tail Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1
@@ -906,7 +906,7 @@
         ZIndex: =36
 
     "'Serial Number Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If('Serial Num Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         MaxLength: =-1

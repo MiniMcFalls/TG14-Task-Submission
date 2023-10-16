@@ -40,7 +40,7 @@
     "Name": "PowerApps_CoreControls_ButtonCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Button",
-    "Version": "0.0.19"
+    "Version": "0.0.20"
   },
   "checkbox": {
     "CustomGroupControlTemplateName": "",
@@ -69,7 +69,7 @@
     "Name": "PowerApps_CoreControls_CheckboxCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Checkbox",
-    "Version": "0.0.14"
+    "Version": "0.0.15"
   },
   "circle": {
     "CustomGroupControlTemplateName": "",
@@ -126,7 +126,7 @@
     "Name": "PowerApps_CoreControls_DatePickerCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Date picker",
-    "Version": "0.0.8"
+    "Version": "0.0.9"
   },
   "datepicker": {
     "CustomGroupControlTemplateName": "",
@@ -169,7 +169,7 @@
     "Name": "PowerApps_CoreControls_DropdownCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Dropdown",
-    "Version": "0.0.21"
+    "Version": "0.0.22"
   },
   "fluidGrid": {
     "CustomGroupControlTemplateName": "",
@@ -363,7 +363,7 @@
     "Name": "PowerApps_CoreControls_RadioGroupCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Radio",
-    "Version": "0.0.9"
+    "Version": "0.0.10"
   },
   "rectangle": {
     "CustomGroupControlTemplateName": "",
@@ -406,7 +406,7 @@
     "Name": "PowerApps_CoreControls_Spinner",
     "OverridableProperties": {},
     "TemplateDisplayName": "Spinner",
-    "Version": "1.0.19"
+    "Version": "1.0.20"
   },
   "text": {
     "CustomGroupControlTemplateName": "",
@@ -435,7 +435,7 @@
     "Name": "PowerApps_CoreControls_TextInputCanvas",
     "OverridableProperties": {},
     "TemplateDisplayName": "Text input",
-    "Version": "0.0.17"
+    "Version": "0.0.18"
   },
   "timer": {
     "CustomGroupControlTemplateName": "",

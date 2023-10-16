@@ -145,7 +145,7 @@
         ZIndex: =15
 
     "'Task Time Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -370,7 +370,7 @@
         ZIndex: =32
 
     "'Task Date Picker' As 'Date picker'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnChange: =Reset(cmp_TimePicker_1)
@@ -383,7 +383,7 @@
         ZIndex: =33
 
     "'Deadline Picker' As 'Date picker'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Required: =true
@@ -394,7 +394,7 @@
         ZIndex: =34
 
     "'Task Location Box' As 'Text input'":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         MaxLength: =-1
@@ -409,7 +409,7 @@
         ZIndex: =35
 
     "'Project Category Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
         Height: =32
@@ -440,7 +440,7 @@
             ZIndex: =1
 
     "'Service Required Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
         Height: =32

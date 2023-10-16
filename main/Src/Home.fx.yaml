@@ -321,7 +321,7 @@ Home As screen:
         ZIndex: =28
 
     Dropdown1 As Dropdown.pcfdataset:
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DefaultSelectedItems: =Blank()
         DisplayMode: =DisplayMode.Edit
         FontSize: =0
@@ -344,7 +344,7 @@ Home As screen:
 
     ButtonCanvas1 As Button:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: =Navigate('ID Information', ScreenTransition.Fade)
@@ -356,7 +356,7 @@ Home As screen:
 
     ButtonCanvas2 As Button:
         Appearance: ='ButtonCanvas.Appearance'.Primary
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =If(Dropdown1.Selected.Value = Blank(),DisplayMode.Disabled, DisplayMode.Edit)
         Height: =34
         OnSelect: |-
@@ -532,7 +532,7 @@ Home As screen:
         ZIndex: =31
 
     "'Alternate Contact Check' As Checkbox":
-        BasePaletteColor: =""
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: ="Alternate Contact Required"

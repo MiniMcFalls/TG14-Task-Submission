@@ -134,1566 +134,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Product Format Box'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Product Format Box'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 4 - Media PR Cont.",
-                "type": "'Form Page 4 - Media PR Cont.'.'Product Format Box'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 4 - Media PR Cont.",
-                "type": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Form Page 6 - Visit Details Cont.",
-                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Form Page 9 - Confirmation'.Canvas1_2.'S1 Confirm'.'S1 Description_1'.AccessibleLabel"
                 }
               ],
@@ -3314,6 +1754,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Product Format Box'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Product Format Box'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 4 - Media PR Cont.",
+                "type": "'Form Page 4 - Media PR Cont.'.'Product Format Box'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 4 - Media PR Cont.",
+                "type": "'Form Page 4 - Media PR Cont.'.'Any Further Details Box'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Loading Screen'.Spinner1.AccessibleLabel"
                 }
               ],
@@ -4754,6 +3254,1506 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S1.'S1 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S2.'S2 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S3.'S3 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S4.'S4 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S5.'S5 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S6.'S6 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S7.'S7 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S8.'S8 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S9.'S9 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Description'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Date'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Hour'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Minute'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Form Page 6 - Visit Details Cont.",
+                "type": "'Form Page 6 - Visit Details Cont.'.Canvas1_1.S10.'S10 Location'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Home.ButtonCanvas1.AccessibleLabel"
                 }
               ],
@@ -5397,7 +5397,7 @@
               }
             }
           ],
-          "version": "1.334"
+          "version": "1.335"
         }
       }
     }
