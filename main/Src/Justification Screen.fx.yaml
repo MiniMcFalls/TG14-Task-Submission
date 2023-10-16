@@ -1,6 +1,17 @@
 "'Justification Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =varBackgroundFill
-    OnVisible: =Set(varJustificationIcon, Icon.Information)
+    OnVisible: |-
+        =Set(varJustificationIcon, Icon.Information);
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
+        If(CurrentVer <> LatestVer.'Vers Num', 'Wrong Version')
 
     "'Sub Heading' As button":
         Align: =Align.Left
@@ -75,28 +86,31 @@
     "'Rank O365_1' As label":
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
+        Size: =11
         Text: =Office365Users.MyProfile().JobTitle
         Width: =328
         X: =410
-        Y: =320
+        Y: =322
         ZIndex: =10
 
     "'Name O365_1' As label":
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
+        Size: =11
         Text: =Office365Users.MyProfile().GivenName & " " &Office365Users.MyProfile().Surname
         Width: =328
         X: =410
-        Y: =349
+        Y: =351
         ZIndex: =11
 
     "'User Email O365_1' As label":
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
+        Size: =11
         Text: =Office365Users.MyProfileV2().mail
         Width: =328
         X: =410
-        Y: =376
+        Y: =380
         ZIndex: =12
 
     "'Location:_1' As label":
@@ -111,10 +125,11 @@
     "'User Location O365_1' As label":
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
+        Size: =11
         Text: =Office365Users.MyProfileV2().officeLocation
         Width: =328
         X: =410
-        Y: =405
+        Y: =407
         ZIndex: =14
 
     "'Your Details Header' As label":
@@ -164,39 +179,6 @@
         Y: =629
         ZIndex: =19
 
-    "'LM O365 Data' As combobox":
-        Default: =Blank()
-        DisplayFields: =["DisplayName","GivenName" & " " & "Surname"]
-        DisplayMode: |-
-            =If(
-                Or(
-                    CurrentUser.JobTitle = "AC",
-                    CurrentUser.JobTitle = "LAC",
-                    CurrentUser.JobTitle = "SAC",
-                    CurrentUser.JobTitle = "SAC(T)",
-                    CurrentUser.JobTitle = "AR",
-                    CurrentUser.JobTitle = "AS2",
-                    CurrentUser.JobTitle = "AS1",
-                    CurrentUser.JobTitle = "AS1(T)"
-                ),
-                DisplayMode.Edit,
-                DisplayMode.Disabled
-            )
-        Height: =32
-        InputTextPlaceholder: ="Find items - Surname, Forename"
-        IsSearchable: =false
-        Items: |-
-            =Office365Users.SearchUser({searchTerm:Concatenate('LM Surname'.Value,", ",'LM Forename'.Value),top:10})
-        NoSelectionText: ="Please select individual from dropdown"
-        SearchFields: =["DisplayName"]
-        SearchItems: =[]
-        SelectMultiple: =false
-        Template: =ListItemTemplate.Person
-        Width: =510
-        X: =410
-        Y: =629
-        ZIndex: =23
-
     "'Proceed button' As button":
         DisplayMode: |-
             =If(
@@ -225,6 +207,7 @@
                     )
                 ),
                 {
+                    'Contact Number': 'User Phone O365_1'.Value,
                     'LM Rank': 'LM Rank Dropdown'.Selected.Value,
                     'LM Forename': 'LM Forename'.Value,
                     'LM Surname': 'LM Surname'.Value,
@@ -277,7 +260,7 @@
         Text: ="BACK"
         Width: =192
         X: =24
-        Y: =410
+        Y: =268
         ZIndex: =61
 
     "'User Phone_1' As label":
@@ -288,15 +271,6 @@
         X: =327
         Y: =435
         ZIndex: =62
-
-    "'User Phone O365_1' As label":
-        AutoHeight: =true
-        FontWeight: =FontWeight.Semibold
-        Text: =Concat(Office365Users.MyProfile().BusinessPhones, Value)
-        Width: =328
-        X: =410
-        Y: =435
-        ZIndex: =63
 
     "'LM Rank:_2' As label":
         AutoHeight: =true
@@ -324,26 +298,6 @@
         X: =717
         Y: =399
         ZIndex: =66
-
-    "'Alt O365' As combobox":
-        Default: =Blank()
-        DisplayFields: =["DisplayName","GivenName" & " " & "Surname"]
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =32
-        InputTextPlaceholder: ="Find items - Surname, Forename"
-        IsSearchable: =false
-        Items: |-
-            =Office365Users.SearchUser({searchTerm:Concatenate('Alt Surname'.Value,", ",'Alt Forename'.Value),top:10})
-        NoSelectionText: ="Please select individual from dropdown"
-        Reset: =If(Self.DisplayMode = DisplayMode.Disabled, true)
-        SearchFields: =["DisplayName"]
-        SearchItems: =[]
-        SelectMultiple: =false
-        Template: =ListItemTemplate.Person
-        Width: =510
-        X: =800
-        Y: =399
-        ZIndex: =70
 
     "'User Phone_3' As label":
         AutoHeight: =true
@@ -561,13 +515,13 @@
     "'Alt O365 Phone' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =32
+        Height: =30
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
         ValidationState: ="None"
         Value: =Concat('Alt O365'.Selected.BusinessPhones, Value)
-        Width: =320
+        Width: =510
         X: =800
         Y: =437
         ZIndex: =86
@@ -761,6 +715,70 @@
         X: =665
         Y: =591
         ZIndex: =90
+
+    "'Alt O365' As Combobox.pcfdataset":
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:Concatenate('Alt Surname'.Value,", ",'Alt Forename'.Value),top:10})
+        Width: =510
+        X: =800
+        Y: =399
+        ZIndex: =91
+
+        DisplayName3 As pcfDataField.textualColumn:
+            FieldDisplayName: ="DisplayName"
+            FieldName: ="DisplayName"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =5
+
+    "'LM O365 Data' As Combobox.pcfdataset":
+        DisplayMode: |-
+            =If(
+                Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
+                ),
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Height: =32
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:Concatenate('LM Surname'.Value,", ",'LM Forename'.Value),top:10})
+        Width: =510
+        X: =410
+        Y: =629
+        ZIndex: =92
+
+        DisplayName3_1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="DisplayName"
+            FieldName: ="DisplayName"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =5
+
+    "'User Phone O365_1' As 'Text input'":
+        BasePaletteColor: =
+        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =32
+        MaxLength: =-1
+        Placeholder: =""
+        Type: ='TextInputCanvas.Type'.Text
+        ValidationState: ="None"
+        Value: =Concat(Office365Users.MyProfile().BusinessPhones, Value)
+        Width: =267
+        X: =410
+        Y: =435
+        ZIndex: =93
 
     Group4 As group:
         Height: =5

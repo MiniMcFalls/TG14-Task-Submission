@@ -19,7 +19,7 @@
                     "en-GB"
                 ),
                 "-",
-                "Your Photographic Tasking-O"
+                "Your RAF VisCom Tasking-O"
             ),
             varEmailContent,
             {IsHtml: true, Importance:"High"}
@@ -37,10 +37,10 @@
             		</b>
             	</p>
             	<p>
-            		<b>Thank You, your responses have been captured and submitted to a TG14 representative for review and action.<b>
+            		<b>Thank You, your responses have been captured and submitted to a RAF VisCom representative for review and action.<b>
                     <br>
                     <br>
-                    <u>You have been assigned the following task number:</u>
+                    <u>You have been assigned the following reference number:</u>
                     <br>
                     <br>
                     <br>
@@ -61,7 +61,7 @@
         Color: =RGBA(54, 176, 75, 1)
         FontWeight: =FontWeight.Bold
         Size: =25
-        Text: =Text(Value(varJobNumber),"0000")
+        Text: =varResponseID
         X: =605
         Y: =478
         ZIndex: =9
@@ -107,7 +107,7 @@
             ="<table border=""0"" cellspacing="""" cellpadding=""0"" align=""center"">
             <tbody>
             <tr>
-            <td style=""width: 700px; max-width: 700px; font-family: Segoe UI,-apple-system,BlinkMacSystemFont,San Francisco,Roboto,Helvetica Neue,Arial; border: solid; border-width: 1px; border-color: #421631; border-radius: 1px; box-shadow: 0 0 50px rgba(0, 0 ,0 ,0.08);"">
+            <td style=""width: 700px; max-width: 700px; font-family: Calibri; border: solid; border-width: 1px; border-color: #421631; border-radius: 1px; box-shadow: 0 0 50px rgba(0, 0 ,0 ,0.08);"">
             <table style=""background-color: #c0d6df; width: 700px; max-width: 700px;"" border=""0"" width=""700"" cellspacing=""0"" cellpadding=""0"" align=""center"">
             <tbody>
             <tr>
@@ -200,7 +200,7 @@
             <tr>
             <td style=""font-size: 12px; background-color: ##c0d6df; height: 40px; width: 100%; color: #60401f; padding: 30px 75px 30px 75px;"">
             <p><strong>Your photographic request has been submitted and will be reviewed and actioned in due course.</strong></p>
-            <h2 style=""text-align: center; color: #60401f;""><strong>Task Number: " & Text(Value(varJobNumber),"0000") & "</strong></h2>
+            <h2 style=""text-align: center; color: #60401f;""><strong>Response ID: " & varResponseID & "</strong></h2>
             <p>Please allow up to 48 hours after your task has been submitted for a descision to be finalised and a response to be sent to you.</p>
             <p>Should you have any questions in relation to your request, please contact your chosen photographic section quoting your task number above.</p>
             </td>

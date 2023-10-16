@@ -1,5 +1,16 @@
 "'Manage Task' As screen":
     Fill: =varBackgroundFill
+    OnVisible: |-
+        =Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
+        If(CurrentVer <> LatestVer.'Vers Num', 'Wrong Version')
 
     cmp_Header_14 As cmp_Header:
 

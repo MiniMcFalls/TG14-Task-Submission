@@ -1,4 +1,14 @@
 "'Wrong Version' As screen":
+    OnVisible: |-
+        =Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
 
     Label12_1 As label:
         BorderColor: =RGBA(168, 0, 0, 1)
@@ -26,7 +36,7 @@
             
             Please refresh this app using the button in the top right corner until this message no longer appears.
             
-            The Current Version is v" & First(Filter('TG14 App Versions', Title = "TG14 Photographic Support Request")).'Vers Num'
+            The Current Version is v" & LatestVer.'Vers Num'
         Width: =Parent.Width * 0.75
         X: =170
         Y: =339

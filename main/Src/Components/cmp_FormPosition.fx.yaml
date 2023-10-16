@@ -1,15 +1,15 @@
 cmp_FormPosition As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =369
+    Height: =197
     Width: =241
     X: =0
     Y: =0
     ZIndex: =1
 
     HtmlText1_4 As htmlViewer:
-        Height: =349
+        Height: =197
         HtmlText: |
-            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 24px; width: 192px; height: 270px; border-radius: 10px'></div>"
+            ="<div style='background-color: rgba(0,0,0,0); box-shadow: 1px 2px 22px 0px rgba(89,87,87,0.85); margin: 24px; width: 192px; height: 147px; border-radius: 10px'></div>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -23,7 +23,7 @@ cmp_FormPosition As CanvasComponent:
         DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =240
+        Height: =117
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -165,169 +165,6 @@ cmp_FormPosition As CanvasComponent:
             Y: =122
             ZIndex: =16
 
-        "'Media/PR_28' As label":
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Media/PR"
-            Width: =64
-            X: =36
-            Y: =137
-            ZIndex: =17
-
-        "'Task details Line_253' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =71
-            X: =100
-            Y: =149
-            ZIndex: =18
-
-        "'Media/PR Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varMediaPRIcon
-            Width: =25
-            X: =178
-            Y: =142
-            ZIndex: =19
-
-        "'Media/PR Cont._28' As label":
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Media/PR Cont."
-            Width: =104
-            X: =36
-            Y: =157
-            ZIndex: =20
-
-        "'Task details Line_256' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =31
-            X: =140
-            Y: =169
-            ZIndex: =21
-
-        "'Media/PR Cont. Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varMediaPRContIcon
-            OnSelect: =
-            Width: =25
-            X: =178
-            Y: =162
-            ZIndex: =22
-
-        "'Visit Details_28' As label":
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Visit Details"
-            Width: =76
-            X: =36
-            Y: =177
-            ZIndex: =23
-
-        "'Task details Line_257' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =59
-            X: =112
-            Y: =189
-            ZIndex: =24
-
-        "'Visit Details Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varVisitDetIcon
-            Width: =25
-            X: =178
-            Y: =182
-            ZIndex: =25
-
-        "'Visit Details Cont._28' As label":
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Visit Details Cont."
-            Width: =104
-            X: =36
-            Y: =197
-            ZIndex: =26
-
-        "'Task details Line_258' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =31
-            X: =140
-            Y: =209
-            ZIndex: =27
-
-        "'Visit Details Cont. Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varVisitDetContIcon
-            Width: =25
-            X: =178
-            Y: =202
-            ZIndex: =28
-
-        "'Official Groups_28' As label":
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Official Group"
-            Width: =87
-            X: =36
-            Y: =217
-            ZIndex: =29
-
-        "'Task details Line_259' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =48
-            X: =123
-            Y: =229
-            ZIndex: =30
-
-        "'Official Groups Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varOfficialGroupIcon
-            Width: =25
-            X: =178
-            Y: =222
-            ZIndex: =31
-
-        Portraits_28 As label:
-            FontWeight: =FontWeight.Lighter
-            Height: =25
-            Size: =9
-            Text: ="Portraits"
-            Width: =64
-            X: =36
-            Y: =237
-            ZIndex: =32
-
-        "'Task details Line_260' As rectangle":
-            Fill: =RGBA(230, 230, 230, 1)
-            Height: =1
-            Width: =71
-            X: =100
-            Y: =249
-            ZIndex: =33
-
-        "'Portraits Checkmark_28' As icon.CheckBadge":
-            Color: =If(Self.Icon = Icon.CheckBadge, RGBA(54, 176, 75, 1),Self.Icon = Icon.Information, RGBA(255, 191, 0, 1), Self.Icon = Icon.Blocked, RGBA(179, 179, 179, 1))
-            Height: =14
-            Icon: =varPortraitsIcon
-            Width: =25
-            X: =178
-            Y: =242
-            ZIndex: =34
-
         "'No1''s Portrait_28' As label":
             FontWeight: =FontWeight.Lighter
             Height: =25
@@ -335,7 +172,7 @@ cmp_FormPosition As CanvasComponent:
             Text: ="Confirmation"
             Width: =87
             X: =36
-            Y: =257
+            Y: =136
             ZIndex: =35
 
         "'Task details Line_261' As rectangle":
@@ -343,7 +180,7 @@ cmp_FormPosition As CanvasComponent:
             Height: =1
             Width: =48
             X: =123
-            Y: =269
+            Y: =148
             ZIndex: =36
 
         "'No1''s Portrait Checkmark_28' As icon.CheckBadge":
@@ -352,7 +189,7 @@ cmp_FormPosition As CanvasComponent:
             Icon: =varConfirmationIcon
             Width: =25
             X: =178
-            Y: =262
+            Y: =141
             ZIndex: =37
 
     Button2 As button:

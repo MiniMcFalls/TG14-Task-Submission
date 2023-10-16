@@ -1,11 +1,11 @@
 "'Form Page 1' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =varBackgroundFill
-    OnVisible: |-
+    OnVisible: |
         =Reset(cmp_TimePicker_1);
         Set(
             varTaskDetIcon,
             Icon.Information
-        )
+        );
 
     "'Justification Text_1' As htmlViewer":
         Height: =124
@@ -338,7 +338,7 @@
         Text: ="BACK"
         Width: =192
         X: =24
-        Y: =410
+        Y: =268
         ZIndex: =29
 
     Rectangle1_1 As rectangle:
@@ -387,6 +387,7 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Required: =true
+        SelectedDate: ='Task Date Picker'.SelectedDate + 1
         ValidationState: ="None"
         Width: =213
         X: =900

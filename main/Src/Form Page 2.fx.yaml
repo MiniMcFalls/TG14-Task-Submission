@@ -1,10 +1,20 @@
 "'Form Page 2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =varBackgroundFill
-    OnVisible: |
+    OnVisible: |-
         =Set(
             varTaskDetContIcon,
             Icon.Information
         );
+        Set(
+            LatestVer,
+            First(
+                Filter(
+                    'TG14 App Versions',
+                    Title = "TG14 Photographic Support Request"
+                )
+            )
+        );
+        If(CurrentVer <> LatestVer.'Vers Num', 'Wrong Version')
 
     "'Justification Text_2' As htmlViewer":
         AutoHeight: =true
@@ -27,27 +37,6 @@
         Y: =110
         ZIndex: =3
 
-    "'TLB:' As label":
-        AutoHeight: =true
-        FontWeight: =FontWeight.Semibold
-        Height: =25
-        Size: =11
-        Text: |-
-            ="TLB:"
-        X: =431
-        Y: =226
-        ZIndex: =4
-
-    "'TLB Su' As label":
-        FontWeight: =FontWeight.Lighter
-        Height: =25
-        Size: =9
-        Text: ="This is your Top Level Budget e.g. An Aviator would fall under ""Air"", An MOD Civil Servant would fall under ""Defence"" etc."
-        Width: =377
-        X: =431
-        Y: =256
-        ZIndex: =5
-
     Rectangle3_4 As rectangle:
         Fill: =RGBA(230, 230, 230, 1)
         Height: =1
@@ -67,8 +56,6 @@
     "'Proceed button_2' As button":
         DisplayMode: |-
             =If(
-                IsBlank('TLB Box'.Selected),
-                DisplayMode.Disabled,
                 'Working Hazards Box'.Value = "",
                 DisplayMode.Disabled,
                 'Task Requirements Box'.Value = "",
@@ -91,8 +78,12 @@
                     )
                 ),
                 {
-                    TLB: 'TLB Box'.Selected.Value,
-                    'AC Tail Number': If('AC Tail Check'.Checked = true, 'AC Tail Number Box'.Value, 'Serial Num Check'.Checked = true, 'Serial Number Box'.Value),
+                    'AC Tail Number': If(
+                        'AC Tail Check'.Checked = true,
+                        'AC Tail Number Box'.Value,
+                        'Serial Num Check'.Checked = true,
+                        'Serial Number Box'.Value
+                    ),
                     'Working Hazards': 'Working Hazards Box'.Value,
                     'Task requirements': 'Task Requirements Box'.Value
                 }
@@ -101,497 +92,9 @@
                 varTaskDetContIcon,
                 Icon.CheckBadge
             );
-            If(
-                'Project Category Box'.Selected.Value = "Engineering",
-                And(
-                    Navigate(
-                        'Form Page 9 - Confirmation',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "PR/Media",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Visit",
-                And(
-                    Navigate(
-                        'Form Page 5 - Visit Details',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Parade/Ceremonial",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Honours & Awards",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Official Group",
-                And(
-                    Navigate(
-                        'Form Page 7 - Official Group',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Portrait",
-                And(
-                    Navigate(
-                        'Form Page 8 - Portraits',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Sports",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Medical/Dental",
-                And(
-                    Navigate(
-                        'Form Page 9 - Confirmation',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "QRA",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Exercise",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Operations",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "RAF Police",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                ),
-                'Project Category Box'.Selected.Value = "Trials",
-                And(
-                    Navigate(
-                        'Form Page 3 - Media PR',
-                        ScreenTransition.Fade
-                    ),
-                    Set(
-                        varTaskDetContIcon,
-                        Icon.CheckBadge
-                    ),
-                    Set(
-                        varMediaPRIcon,
-                        Icon.Information
-                    ),
-                    Set(
-                        varMediaPRContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varVisitDetContIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varOfficialGroupIcon,
-                        Icon.Blocked
-                    ),
-                    Set(
-                        varPortraitsIcon,
-                        Icon.Blocked
-                    )
-                )
+            Navigate(
+                'Form Page 9 - Confirmation',
+                ScreenTransition.Fade
             );
         Text: ="CONTINUE"
         Width: =117
@@ -607,7 +110,7 @@
         Text: |-
             ="Aircraft Tail number/Part Serial:"
         Width: =259
-        X: =856
+        X: =468
         Y: =224
         ZIndex: =10
 
@@ -617,7 +120,7 @@
         Size: =9
         Text: ="Where applicable e.g. ZJ917"
         Width: =168
-        X: =856
+        X: =468
         Y: =248
         ZIndex: =11
 
@@ -628,30 +131,18 @@
         Size: =9
         Text: ="(Engineering Only)"
         Width: =168
-        X: =1009
+        X: =621
         Y: =248
         ZIndex: =12
 
     "'Working Hazards:' As label":
-        AutoHeight: =true
         FontWeight: =FontWeight.Semibold
-        Height: =25
         Size: =11
         Text: ="Any Working Hazards?"
         Width: =179
-        X: =431
-        Y: =353
+        X: =795
+        Y: =220
         ZIndex: =14
-
-    "'Working Hazards Sub' As label":
-        FontWeight: =FontWeight.Lighter
-        Height: =20
-        Size: =9
-        Text: ="i.e. Working at height, Enclosed spaces, Fuel vapour/explosive hazard areas etc."
-        Width: =445
-        X: =431
-        Y: =383
-        ZIndex: =15
 
     Rectangle3_11 As rectangle:
         Fill: =RGBA(230, 230, 230, 1)
@@ -669,19 +160,9 @@
         Text: |-
             ="Task Requirements:"
         Width: =179
-        X: =431
-        Y: =490
+        X: =433
+        Y: =399
         ZIndex: =18
-
-    "'Task Requirements Sub' As label":
-        FontWeight: =FontWeight.Lighter
-        Height: =37
-        Size: =9
-        Text: ="What needs photographing/filming including specific details e.g. serial number/model number."
-        Width: =723
-        X: =431
-        Y: =516
-        ZIndex: =19
 
     "'Sub Heading_2' As button":
         Align: =Align.Left
@@ -723,7 +204,7 @@
         Text: ="BACK"
         Width: =192
         X: =24
-        Y: =410
+        Y: =268
         ZIndex: =25
 
     Rectangle1_3 As rectangle:
@@ -747,35 +228,6 @@
         X: =1102
         Y: =298
         ZIndex: =27
-
-    "'TLB Box' As Dropdown.pcfdataset":
-        BasePaletteColor: =
-        DefaultSelectedItems: =Blank()
-        DisplayMode: =DisplayMode.Edit
-        FontSize: =0
-        Height: =32
-        Items: |-
-            =[
-                Blank(),
-                "Air",
-                "Land",
-                "Sea",
-                "PJHQ",
-                "Defence"
-            ]
-        ValidationState: ="None"
-        Width: =262
-        X: =431
-        Y: =292
-        ZIndex: =31
-
-        Value8 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =1
 
     Group4_2 As group:
         Height: =5
@@ -826,22 +278,22 @@
     "'Working Hazards Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
-        Height: =44
+        Height: =120
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
         ValidationState: ="None"
         Value: =Blank()
-        Width: =723
-        X: =431
-        Y: =420
+        Width: =413
+        X: =795
+        Y: =254
         ZIndex: =32
 
     "'Task Requirements Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
-        Height: =128
+        Height: =256
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
@@ -849,9 +301,9 @@
         Type: ="Text"
         ValidationState: ="None"
         Value: =Blank()
-        Width: =723
-        X: =431
-        Y: =553
+        Width: =775
+        X: =433
+        Y: =429
         ZIndex: =33
 
     "'AC Tail Check' As Checkbox":
@@ -869,7 +321,7 @@
         OnSelect: =false
         OnUncheck: =false
         Width: =37
-        X: =819
+        X: =431
         Y: =293
         ZIndex: =34
 
@@ -887,7 +339,7 @@
         OnSelect: =false
         OnUncheck: =false
         Width: =37
-        X: =819
+        X: =431
         Y: =342
         ZIndex: =35
 
@@ -901,7 +353,7 @@
         ValidationState: ="None"
         Value: =Blank()
         Width: =232
-        X: =856
+        X: =468
         Y: =293
         ZIndex: =36
 
@@ -915,7 +367,7 @@
         ValidationState: ="None"
         Value: =Blank()
         Width: =232
-        X: =856
+        X: =468
         Y: =343
         ZIndex: =37
 
@@ -928,7 +380,7 @@
             ="Aircraft Tail Number:"
         VerticalAlign: =VerticalAlign.Bottom
         Width: =99
-        X: =856
+        X: =468
         Y: =277
         ZIndex: =38
 
@@ -941,7 +393,25 @@
             ="Serial Number:"
         VerticalAlign: =VerticalAlign.Bottom
         Width: =79
-        X: =856
+        X: =468
         Y: =327
         ZIndex: =39
+
+    "InfoButtonCanvas1 As 'Information button'":
+        Content: ="What needs photographing/filming including specific details e.g. serial number/model number."
+        DisplayMode: =DisplayMode.Edit
+        Height: =28
+        Width: =32
+        X: =401
+        Y: =427
+        ZIndex: =40
+
+    "InfoButtonCanvas2 As 'Information button'":
+        Content: ="i.e. Working at height, Enclosed spaces, Fuel vapour/explosive hazard areas etc."
+        DisplayMode: =DisplayMode.Edit
+        Height: =31
+        Width: =32
+        X: =763
+        Y: =254
+        ZIndex: =41
 
