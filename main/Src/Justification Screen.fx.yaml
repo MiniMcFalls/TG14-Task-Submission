@@ -218,7 +218,7 @@
                 }
             );
             If(
-                'Alternate Contact Check_1'.Value = true,
+                'Alternate Contact Check_1'.Checked = true,
                 Patch(
                     UserResponses,
                     First(
@@ -328,17 +328,6 @@
         Y: =273
         ZIndex: =74
 
-    "'Alternate Contact Check_1' As checkbox":
-        CheckboxSize: =30
-        Default: =If('Alternate Contact Check'.Checked = true, true,false)
-        Height: =39
-        OnUncheck: =
-        Text: ="Alternate Contact Required"
-        Width: =343
-        X: =1003
-        Y: =274
-        ZIndex: =75
-
     cmp_Header_2 As cmp_Header:
         ZIndex: =76
 
@@ -366,13 +355,13 @@
 
     "'Alt Service Dropdown' As Dropdown.pcfdataset":
         AccessibleLabel: =""
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DefaultSelectedItems: =Blank()
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If('Alternate Contact Check_1'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         FontSize: =0
         Height: =32
         Items: =[Blank() ,"Royal Air Force", "Royal Navy", "Army", "Royal Marines", "Civil Service", "Civilian"]
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =245
         X: =800
         Y: =323
@@ -387,9 +376,9 @@
             ZIndex: =1
 
     "'Alt Rank' As Dropdown.pcfdataset":
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: |
-            =If('Alternate Contact Check_1'.Value = true && !IsBlank('Alt Service Dropdown'.Selected.Value), DisplayMode.Edit, DisplayMode.Disabled)
+            =If('Alternate Contact Check_1'.Checked = true && !IsBlank('Alt Service Dropdown'.Selected.Value), DisplayMode.Edit, DisplayMode.Disabled)
         FontSize: =0
         Height: =32
         Items: |-
@@ -472,7 +461,7 @@
                     "Mx"
                 ]
             )
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =254
         X: =1056
         Y: =323
@@ -487,39 +476,42 @@
             ZIndex: =2
 
     "'Alt Forename' As 'Text input'":
-        BasePaletteColor: =
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =If('Alternate Contact Check_1'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value), "Error", "None")
         Width: =245
         X: =800
         Y: =361
         ZIndex: =84
 
     "'Alt Surname' As 'Text input'":
-        BasePaletteColor: =
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =If('Alternate Contact Check_1'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value), "Error", "None")
         Width: =254
         X: =1056
         Y: =361
         ZIndex: =85
 
     "'Alt O365 Phone' As 'Text input'":
-        BasePaletteColor: =
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =30
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =If('Alternate Contact Check_1'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
+        FontSize: =0
+        Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value), "Error", "None")
         Value: =Concat('Alt O365'.Selected.BusinessPhones, Value)
         Width: =510
         X: =800
@@ -527,7 +519,7 @@
         ZIndex: =86
 
     "'LM Service Dropdown' As Dropdown.pcfdataset":
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DefaultSelectedItems: =Blank()
         DisplayMode: |-
             =If(
@@ -547,7 +539,7 @@
         FontSize: =0
         Height: =32
         Items: =[Blank() ,"Royal Air Force", "Royal Navy", "Army", "Royal Marines", "Civil Service", "Civilian"]
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =245
         X: =410
         Y: =551
@@ -562,7 +554,7 @@
             ZIndex: =4
 
     "'LM Rank Dropdown' As Dropdown.pcfdataset":
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: =If(IsBlank('LM Service Dropdown'.Selected.Value), DisplayMode.Disabled, DisplayMode.Edit)
         FontSize: =0
         Height: =32
@@ -646,7 +638,7 @@
                     "Mx"
                 ]
             )
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Selected), "Error", "None")
         Width: =255
         X: =665
         Y: =551
@@ -661,7 +653,7 @@
             ZIndex: =3
 
     "'LM Forename' As 'Text input'":
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: |-
             =If(
                 Or(
@@ -677,11 +669,12 @@
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value), "Error", "None")
         Width: =245
         X: =410
         Y: =591
@@ -689,7 +682,7 @@
 
     "'LM Surname' As 'Text input'":
         AccessibleLabel: ="Surname"
-        BasePaletteColor: =
+        BasePaletteColor: =varHeaderFill
         DisplayMode: |-
             =If(
                 Or(
@@ -705,22 +698,25 @@
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Required: =true
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value), "Error", "None")
         Width: =254
         X: =665
         Y: =591
         ZIndex: =90
 
     "'Alt O365' As Combobox.pcfdataset":
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =If('Alternate Contact Check_1'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Height: =32
         Items: |-
             =Office365Users.SearchUser({searchTerm:Concatenate('Alt Surname'.Value,", ",'Alt Forename'.Value),top:10})
+        ValidationState: =If(IsBlank(Self.Selected) && 'Alternate Contact Check_1'.Checked = true, "Error", "None")
         Width: =510
         X: =800
         Y: =399
@@ -735,6 +731,7 @@
             ZIndex: =5
 
     "'LM O365 Data' As Combobox.pcfdataset":
+        BasePaletteColor: =varHeaderFill
         DisplayMode: |-
             =If(
                 Or(
@@ -753,6 +750,21 @@
         Height: =32
         Items: |-
             =Office365Users.SearchUser({searchTerm:Concatenate('LM Surname'.Value,", ",'LM Forename'.Value),top:10})
+        ValidationState: |-
+            =If(
+                IsBlank(Self.Selected) && Or(
+                    CurrentUser.JobTitle = "AC",
+                    CurrentUser.JobTitle = "LAC",
+                    CurrentUser.JobTitle = "SAC",
+                    CurrentUser.JobTitle = "SAC(T)",
+                    CurrentUser.JobTitle = "AR",
+                    CurrentUser.JobTitle = "AS2",
+                    CurrentUser.JobTitle = "AS1",
+                    CurrentUser.JobTitle = "AS1(T)"
+                ),
+                "Error",
+                "None"
+            )
         Width: =510
         X: =410
         Y: =629
@@ -767,8 +779,9 @@
             ZIndex: =5
 
     "'User Phone O365_1' As 'Text input'":
-        BasePaletteColor: =
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        BasePaletteColor: =varHeaderFill
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
@@ -779,6 +792,17 @@
         X: =410
         Y: =435
         ZIndex: =93
+
+    "'Alternate Contact Check_1' As Checkbox":
+        BasePaletteColor: =varHeaderFill
+        Checked: =If('Alternate Contact Check'.Checked = true, true,false)
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Alternate Contact Required"
+        Width: =258
+        X: =1006
+        Y: =277
+        ZIndex: =94
 
     Group4 As group:
         Height: =5

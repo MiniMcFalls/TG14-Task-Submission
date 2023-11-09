@@ -459,6 +459,7 @@
     "TextInputCanvas1 As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         OnChange: =Set(varSearchTerm, Blank()); Set(varSearchUnit, Blank());
@@ -474,6 +475,7 @@
     ButtonCanvas3 As Button:
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         OnSelect: =Set(varSearchTerm, TextInputCanvas1.Value); Set(varSearchUnit, DropdownCanvas1.Selected.Value);
         Text: ="Search"

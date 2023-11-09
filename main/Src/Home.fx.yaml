@@ -368,6 +368,7 @@ Home As screen:
         Appearance: ='ButtonCanvas.Appearance'.Secondary
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         OnSelect: =Navigate('ID Information', ScreenTransition.Fade)
         Text: ="ID Information"
@@ -380,6 +381,7 @@ Home As screen:
         Appearance: ='ButtonCanvas.Appearance'.Primary
         BasePaletteColor: =
         DisplayMode: =If(Dropdown1.Selected.Value = Blank(),DisplayMode.Disabled, DisplayMode.Edit)
+        FontSize: =0
         Height: =34
         OnSelect: |-
             =Refresh('TG14 Task Information') && Notify(
@@ -482,6 +484,7 @@ Home As screen:
     "'Alternate Contact Check' As Checkbox":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         Label: ="Alternate Contact Required"
         OnCheck: =false
@@ -556,7 +559,8 @@ Home As screen:
 
     "'User Phone O365_2' As 'Text input'":
         BasePaletteColor: =
-        DisplayMode: =If('Alternate Contact Check_1'.Value = true, DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""

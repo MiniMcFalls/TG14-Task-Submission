@@ -52,7 +52,7 @@
         ZIndex: =4
 
     "'Proceed button_9' As button":
-        DisplayMode: =
+        DisplayMode: =If(CheckboxCanvas2.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
         Fill: =RGBA(54, 176, 75, 1)
         FontWeight: =FontWeight.Lighter
         Height: =34
@@ -211,7 +211,7 @@
                         Value
                     ),
                     'POC if Different': If(
-                        'Alternate Contact Check_1'.Value = true,
+                        'Alternate Contact Check_1'.Checked = true,
                         Concatenate(
                             Concat(
                                 Filter(
@@ -1031,6 +1031,15 @@
         X: =269
         Y: =220
         ZIndex: =11
+
+    CheckboxCanvas2 As Checkbox:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="I Confirm this Information is correct"
+        Width: =280
+        X: =948
+        Y: =718
+        ZIndex: =12
 
     Group4_9 As group:
         Height: =5

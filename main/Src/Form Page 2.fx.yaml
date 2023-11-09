@@ -56,11 +56,9 @@
     "'Proceed button_2' As button":
         DisplayMode: |-
             =If(
-                'Working Hazards Box'.Value = "",
-                DisplayMode.Disabled,
-                'Task Requirements Box'.Value = "",
-                DisplayMode.Disabled,
-                'Project Category Box'.Selected.Value = "Engineering" && 'AC Tail Number Box'.Value = "" And 'Serial Number Box'.Value = "",
+                'Working Hazards Box'.ValidationState = "Error" Or
+                'Task Requirements Box'.ValidationState = "Error" Or
+                Label8_3.Visible = true,
                 DisplayMode.Disabled,
                 DisplayMode.Edit
             )
@@ -108,7 +106,7 @@
         Height: =25
         Size: =11
         Text: |-
-            ="Aircraft Tail number/Part Serial:"
+            ="Aircraft Tail Number/Part Serial:"
         Width: =259
         X: =468
         Y: =224
@@ -223,10 +221,16 @@
         Size: =8
         Text: ="*Please submit a valid tail or serial number"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =If('AC Tail Check'.Checked = true And 'AC Tail Number Box'.Value = "", true, 'Serial Num Check'.Checked = true And 'Serial Number Box'.Value = "", true)
-        Width: =194
-        X: =1102
-        Y: =298
+        Visible: |-
+            =If(
+                'AC Tail Check'.Checked = true And 'AC Tail Number Box'.ValidationState = "Error",
+                true,
+                'Serial Num Check'.Checked = true And 'Serial Number Box'.ValidationState = "Error",
+                true
+            )
+        Width: =262
+        X: =465
+        Y: =376
         ZIndex: =27
 
     Group4_2 As group:
@@ -278,12 +282,13 @@
     "'Working Hazards Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =120
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
         Value: =Blank()
         Width: =413
         X: =795
@@ -293,13 +298,14 @@
     "'Task Requirements Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =256
         MaxLength: =-1
         Mode: ='TextInputCanvas.Mode'.Multiline
         Placeholder: =""
         Required: =true
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If(IsBlank(Self.Value) Or Self.Value = Blank(), "Error", "None")
         Value: =Blank()
         Width: =775
         X: =433
@@ -315,11 +321,12 @@
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
+        FontSize: =0
         Height: =31
         Label: =""
-        OnCheck: =false
+        OnCheck: =Reset('AC Tail Number Box')
         OnSelect: =false
-        OnUncheck: =false
+        OnUncheck: =Reset('AC Tail Number Box')
         Width: =37
         X: =431
         Y: =293
@@ -333,11 +340,12 @@
                 DisplayMode.Edit,
                 DisplayMode.Disabled
             )
+        FontSize: =0
         Height: =32
         Label: =""
-        OnCheck: =false
+        OnCheck: =Reset('Serial Number Box')
         OnSelect: =false
-        OnUncheck: =false
+        OnUncheck: =Reset('Serial Number Box')
         Width: =37
         X: =431
         Y: =342
@@ -346,11 +354,12 @@
     "'AC Tail Number Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =If('AC Tail Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If((IsBlank(Self.Value) Or Self.Value = Blank() Or (Len(Self.Value) >= 6) Or (Len(Self.Value) <= 4)) And 'AC Tail Check'.Checked = true, "Error", "None")
         Value: =Blank()
         Width: =232
         X: =468
@@ -360,11 +369,12 @@
     "'Serial Number Box' As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =If('Serial Num Check'.Checked = true, DisplayMode.Edit, DisplayMode.Disabled)
+        FontSize: =0
         Height: =32
         MaxLength: =-1
         Placeholder: =""
         Type: ="Text"
-        ValidationState: ="None"
+        ValidationState: =If((IsBlank(Self.Value) Or Self.Value = Blank()) And 'Serial Num Check'.Checked = true, "Error", "None")
         Value: =Blank()
         Width: =232
         X: =468
@@ -398,8 +408,10 @@
         ZIndex: =39
 
     "InfoButtonCanvas1 As 'Information button'":
+        BasePaletteColor: =
         Content: ="What needs photographing/filming including specific details e.g. serial number/model number."
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =28
         Width: =32
         X: =401
@@ -407,11 +419,49 @@
         ZIndex: =40
 
     "InfoButtonCanvas2 As 'Information button'":
+        BasePaletteColor: =
         Content: ="i.e. Working at height, Enclosed spaces, Fuel vapour/explosive hazard areas etc."
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =31
         Width: =32
         X: =763
         Y: =254
         ZIndex: =41
+
+    Icon3 As icon.CheckBadge:
+        Color: =RGBA(45, 128, 40, 1)
+        Height: =31
+        Icon: =Icon.CheckBadge
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Visible: |-
+            =If(
+                'AC Tail Check'.Checked = true And 'AC Tail Number Box'.ValidationState = "None",
+                true
+            )
+        Width: =44
+        X: =700
+        Y: =293
+        ZIndex: =42
+
+    Icon3_1 As icon.CheckBadge:
+        Color: =RGBA(45, 128, 40, 1)
+        Height: =31
+        Icon: =Icon.CheckBadge
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Visible: |-
+            =If(
+                'Serial Num Check'.Checked = true And 'Serial Number Box'.ValidationState = "None",
+                true
+            )
+        Width: =44
+        X: =700
+        Y: =343
+        ZIndex: =43
 

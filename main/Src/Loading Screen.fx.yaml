@@ -107,6 +107,7 @@
         Appearance: ='Spinner.Appearance'.Primary
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontSize: =0
         Height: =106
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =200
